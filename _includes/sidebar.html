@@ -1,0 +1,46 @@
+<div class="sidebar no-print">
+    {% if site.resume_section_skills %}
+    <!-- begin Skills -->
+    <section class="content-section">
+
+        <header class="">
+        <h2>Technical Skills</h2>
+        </header>
+        {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
+        <h4 class="resume-item-subtitle">Programming Languages</h4>
+
+        <ul class="resume-item-list">
+        {% for language in all_languages %}
+            {% if language %}
+            <li>{{ language }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+        {% assign all_tools = site.data.experience | map: "tools" | compact | uniq | sort %}
+
+        <h4 class="resume-item-subtitle">Tools</h4>
+
+        <ul class="resume-item-list">
+        {% for tool in all_tools %}
+            {% if tool %}
+            <li>{{ tool }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+        {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
+        <h4 class="resume-item-subtitle">Infrastructure</h4>
+
+        <ul class="resume-item-list">
+        {% for server in all_infrastructure %}
+            {% if server %}
+            <li>{{ server }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+
+    </section>
+    <!-- end Skills -->
+    {% endif %}
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+</div>

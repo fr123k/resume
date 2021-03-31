@@ -1,0 +1,24 @@
+.grid {
+  display: flex;
+ }
+.col-1-2 {
+  flex: 1;
+}
+.cole-1-2:last-child {
+  margin-left: 20px;
+}
+
+.resume-item-title {
+  border-bottom: 0.5px solid #c7c7c7;
+  line-height: 2em !important;
+}
+
+.icon-links {
+  float: none !important;
+}
+
+.resume-item-subtitle {
+  font-size: 0.75rem;
+  margin: 0 0 .75rem;
+  line-height: 1;
+}

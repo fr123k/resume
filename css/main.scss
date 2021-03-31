@@ -12,5 +12,7 @@
 
 // Layouts
 @import "resume";
-
-@import "{{ resume_theme.theme }}";
+// hyde theme
+@import "hyde";
+// custom theme
+@import "custom";
