@@ -13,7 +13,7 @@
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
         {% if site.resume_avatar == 'true' %}
-        <img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
+        <img src="{{ site.avatar }}" alt="my photo" class="avatar no-print" itemprop="image"/>
         {% endif %}
 
         <!-- Your name is defined in the _config.yml file -->
@@ -45,7 +45,6 @@
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %}
-
       </header>
 
       {% if site.resume_section_experience %}
