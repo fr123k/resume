@@ -23,7 +23,7 @@ resume_name:                    "Frank Ittermann"
 resume_title:                   "Team Lead Site Reliability Engineering"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "fr12_k@yahoo.com"
+resume_contact_email:           "frank.ittermann@yahoo.com"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       ""
@@ -32,7 +32,7 @@ resume_contact_address:         ""
 resume_header_contact_info:     ""
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: "<p>Everything seams to be impossible until you did it.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -44,17 +44,18 @@ resume_looking_for_work:        "no"
 # comment out to hide
 resume_section_experience:      true
 resume_section_education:       true
-resume_section_projects:        true
+resume_section_projects:        false
 resume_section_skills:          true
-resume_section_recognition:     true
+resume_section_recognition:     false
 resume_section_links:           true
-resume_section_associations:    true
-# resume_section_interests:       true
+resume_section_associations:    false
+resume_section_interests:       true
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
   resume_github_url:            "https://github.com/fr123k"
+  resume_github_url2:           "https://github.com/pussinboots"
   # resume_twitter_url:           ""
   # resume_dribbble_url:          ""
   # resume_facebook_url:          "insert Facebook URL here"
@@ -65,8 +66,7 @@ resume_social_links:
 resume_print_social_links:      true
 
 # Design settings
-#resume_theme: default
-resume_theme: jekyll-theme-hacker
+resume_theme: default
 
 # Note: when editing locally, remember to restart
 # your Jekyll server when you edit this file. Changes

@@ -1,18 +1,183 @@
 # Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points
 
-# Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
+# Senior Java Software Engineer
+- company: Data4Life
+  position: Team Lead of Site Reliability Engineering Team
+  duration:  Oct, 2020 &mdash; present
+  summary: 
+  projects:
+    - description: Team Lead 
+  tools:
+    - Jira
+    - Confluence
+    - Slack
+  infrastructure:
+    - Azure
+    - Openstack
+    - AWS
+
+# Senior Site Reliability Engineer
+- company: Data4Life (formely Gesundheitscloud)
+  position: Senior Site Reliability Engineer
+  duration:  Dec, 2019 &mdash; Oct, 2020
+  summary: 
+  projects:
+    - description: Support
+  languages:
+    - golang
+    - Bash 4
+    - python
+  tools:
+    - Ansible
+    - Hashicorp Vault
+    - Hashicorp Terraform
+    - Hashicorp Packer
+    - Hashicorp Vagrant
+    - Jenkins
+  infrastructure:
+    - Azure
+    - Openstack
+    - AWS
+    - PostgreSQL
+
+# Site Reliability Engineer
+- company: Data4Life (formely Gesundheitscloud)
+  position: Site Reliability Engineer
+  duration:  Jan, 2018 &mdash; Dec, 2019
+  summary: 
+  projects:
+    - description: Support
+  languages:
+    - golang
+    - Bash 4
+    - python
+  tools:
+    - Hashicorp Vault
+    - Hashicorp Terraform
+    - Jenkins
+  infrastructure:
+    - Azure
+    - AzureStack
+    - Openstack
+
+# Senior Java Software Engineer
+- company: Hasso Plattner Institute
+  position: Senior Java Software Engineer
+  duration:  Sep, 2017 &mdash; Dec, 2017
+  summary: 
+  projects:
+    - description: Maintenance and Bug Fixing of a 20 yrs. 
+  languages:
+    - Java
+  tools:
+    - Travis CI 
+  infrastructure:
+    - Azure
+
+# Senior Java Software Developer
+- company: QualityPark
+  position: Senior Java Software Engineer
+  duration:  Apr, 2015 &mdash; Aug, 2017
+  summary: 
+  projects:
+    - description: Maintenance and Bug Fixing of a 20 yrs. old Web Application (C/C++)
+    - description: Migration towards Java Development
+    - description: Advocate for Continuous Integration and Continuous Deployment
+    - description: On Sight Customer Presentation and Support
+  languages:
+    - Java
+    - JavaScript
+    - C++
+    - C
+    - C#
+  frameworks:
+    - Apache Jersey
+    - AngularJS 1
+    - JDBC
+    - JUnit
+  tools:
+    - Jenkins
+    - Apache Maven
+  infrastructure:
+    - Tomcat 7
+    - Oracle Database
+
+# Unskilled Laborer
+- company: ZAG Zeitarbeits-Gesellschaft GmbH
+  position: Unskilled Laborer
+  duration:  Sep, 2014 &mdash; Feb, 2015
+  summary: 
+
+# Senior Software Developer
+- company: Self-employed
+  position: Open Source Developer
+  duration:  Aug, 2013 &mdash; Sept, 2014
+  summary: 
+  projects:
+    - description: Learning Software Development with Scala and angularjs
+    - description: First experiences with Continuous Integration and Deployment
+    - description: https://github.com/pussinboots/angularjs-crypto
+    - description: https://github.com/pussinboots/unitcover
+    - description: https://github.com/pussinboots/pm
+    - description: https://github.com/pussinboots/vagrant-git
+  languages:
+    - JavaScript
+    - Scala
+    - Java
+  frameworks:
+    - AngularJS 1
+    - Apache Wicket
+    - NodeJS
+  tools:
+    - sbt
+    - Travis CI
+    - NodeJS
+  infrastructure:
+    - Heroku
+
+# Senior Software Developer
+- company: Deutsche Post AG
+  position: Senior Software Developer
+  duration:  Mar, 2013 &mdash; Aug, 2013
   summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+  projects:
+    - description: B2C Rest API Services/Integrations
+  languages:
+    - Java
+    - Groovy
+  frameworks:
+    - Grails
+  tools:
+    - Gradle
+    - Teamcity
+    - Puppet
+  infrastructure:
+    - Jetty
 
+# Senior Java Software Developer
+- company: AdClear GmbH
+  position: Senior Java Software Developer
+  duration:  Mar, 2011 &mdash; Oct, 2012
+  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+  projects:
+    - description: Development of Web Application
+    - description: Data Access Services
+    - description: Analyse and Reporting Services
+  languages:
+    - Java
+    - JavaScript
+  frameworks:
+    - Apache Wicket
+    - Apache CXF
+  tools:
+    - Apache Maven
+    - Jenkins
+  infrastructure:
+    - Tomcat 6
+    - MongoDB
+    - Root Server
 
-# Communications Coordinator
+# Senior Java Software Developer
 - company: zanox
   position: Senior Java Software Developer
   duration:   Aug, 2006  &mdash; Feb, 2011
