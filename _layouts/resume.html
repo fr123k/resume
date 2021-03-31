@@ -60,6 +60,41 @@
           <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
           <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
           <p class="resume-item-copy">{{ job.summary }}</p>
+          {% if job.projects %}
+          <ul class="resume-item-list">
+            {% for project in job.projects %}
+            <li>{{ project.company }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if job.languages %}
+          <ul class="resume-item-list">
+            {% for language in job.languages %}
+            <li>{{ language }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if job.frameworks %}
+          <ul class="resume-item-list">
+            {% for framework in job.frameworks %}
+            <li>{{ framework }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if job.tools %}
+          <ul class="resume-item-list">
+            {% for tool in job.tools %}
+            <li>{{ tool }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if job.infrastructure %}
+          <ul class="resume-item-list">
+            {% for server in job.infrastructure %}
+            <li>{{ server }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div><!-- end of resume-item -->
         {% endfor %}
 
@@ -129,6 +164,13 @@
           <p class="resume-item-copy">{{ skill.description }}</p>
         </div>
         {% endfor %}
+        {% assign all_infrastructure = site.data.experience | map: "infrastructure" %}
+
+        <ul class="resume-item-list">
+        {% for server in all_infrastructure | uniq %}
+          <li>{{ server }}</li>
+          {% endfor %}
+        </ul>
 
       </section>
       <!-- end Skills -->

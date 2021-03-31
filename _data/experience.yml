@@ -3,7 +3,7 @@
 - company: Springfield International Human Rights Outreach
   position: VP of Global Communications
   duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points
 
 # Director of Digital Stratgy
 - company: United Nations Human Rights Council
@@ -13,7 +13,27 @@
 
 
 # Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
+- company: zanox
+  position: Senior Java Software Developer
+  duration:   Aug, 2006  &mdash; Feb, 2011
   summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+  projects:
+    - description: migration to the Java Enterprise Platform
+    - description: B2B and B2C integration with Web Services (Soap and Rest)
+    - description: conception and development of zanox connect (authentication and authorization)
+    - description: maintaining and scaling of the public API
+  languages:
+    - Java
+    - C++
+  frameworks:
+    - Hibernate
+    - Apache CXF
+    - Apache Lucene
+  tools:
+    - Apache Ant
+    - Apache Maven
+    - Jenkins
+  infrastructure:
+    - JBoss 4
+    - Tomcat 6
+    - MSSQL
