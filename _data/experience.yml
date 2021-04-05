@@ -1,6 +1,6 @@
 # Jobs
 
-# Senior Java Software Engineer
+# Team Lead of Site Reliability Engineering Team
 - company: Data4Life
   position: Team Lead of Site Reliability Engineering Team
   duration:  Oct, 2020 &mdash; present
@@ -22,7 +22,7 @@
   duration:  Dec, 2019 &mdash; Oct, 2020
   summary: 
   projects:
-    - description: Support
+    - description: Technical Lead
   languages:
     - golang
     - Bash 4
@@ -43,10 +43,10 @@
 # Site Reliability Engineer
 - company: Data4Life (formely Gesundheitscloud)
   position: Site Reliability Engineer
-  duration:  Jan, 2018 &mdash; Dec, 2019
+  duration: Jan, 2018 &mdash; Dec, 2019
   summary: 
   projects:
-    - description: Support
+    - description: Migration from public to private cloud.
   languages:
     - golang
     - Bash 4
@@ -139,7 +139,7 @@
 - company: Deutsche Post AG
   position: Senior Software Developer
   duration:  Mar, 2013 &mdash; Aug, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+  summary:
   projects:
     - description: B2C Rest API Services/Integrations
   languages:
@@ -158,7 +158,7 @@
 - company: AdClear GmbH
   position: Senior Java Software Developer
   duration:  Mar, 2011 &mdash; Oct, 2012
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+  summary:
   projects:
     - description: Development of Web Application
     - description: Data Access Services
@@ -181,12 +181,14 @@
 - company: zanox
   position: Senior Java Software Developer
   duration:   Aug, 2006  &mdash; Feb, 2011
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+  summary: Hired as working student for the development of an web application with Microsoft C++ cgi framework. Finished the exam and was hired as a Java Software Developer. 2006 &mdash; 2010 migration of core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &mdash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API.
   projects:
-    - description: migration to the Java Enterprise Platform
+    - description: reverse engineering of the legacy system (C++ PRM)
+    - description: migration to the Java Platform, Enterprise Edition
+    - description: design and development of the core services with SOA (Service Oriented Architecture)
     - description: B2B and B2C integration with Web Services (Soap and Rest)
     - description: conception and development of zanox connect (authentication and authorization)
-    - description: maintaining and scaling of the public API
+    - description: maintaining and scaling of an public API
   languages:
     - Java
     - C++
@@ -201,4 +203,17 @@
   infrastructure:
     - JBoss 4
     - Tomcat 6
+    - memcached
+    - lighttpd
     - MSSQL
+
+# Study Internship
+- company: Total
+  position: Internship
+  duration: Nov, 2003  &mdash; Feb, 2004
+  summary: During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage.
+  projects:
+    - description: Development of an internal E-commerce like shop for oil related products.
+    - description: Automation of internal web statistics report generation.
+  languages:
+    - Perl
