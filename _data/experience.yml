@@ -160,9 +160,9 @@
   duration:  Mar, 2011 &mdash; Oct, 2012
   summary:
   projects:
-    - description: Development of Web Application
-    - description: Data Access Services
-    - description: Analyse and Reporting Services
+    - description: Design and Development of Map Reduce (MongoDB) based analyse and reporting services
+    - description: Design and Development of data access Web Services
+    - description: Design and Development of web application to analyze ecommerce Customer Journeys
   languages:
     - Java
     - JavaScript
@@ -183,12 +183,12 @@
   duration:   Aug, 2006  &mdash; Feb, 2011
   summary: Hired as working student for the development of an web application with Microsoft C++ cgi framework. Finished the exam and was hired as a Java Software Developer. 2006 &mdash; 2010 migration of core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &mdash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API.
   projects:
-    - description: reverse engineering of the legacy system (C++ PRM)
-    - description: migration to the Java Platform, Enterprise Edition
-    - description: design and development of the core services with SOA (Service Oriented Architecture)
+    - description: Development and maintenance of an public API
+    - description: Conception and development of zanox connect (authentication and authorization)
     - description: B2B and B2C integration with Web Services (Soap and Rest)
-    - description: conception and development of zanox connect (authentication and authorization)
-    - description: maintaining and scaling of an public API
+    - description: Design and development of the core services with SOA (Service Oriented Architecture)
+    - description: Migration to the Java Platform, Enterprise Edition
+    - description: Reverse Engineering of the Legacy System (C++ PRM)
   languages:
     - Java
     - C++
@@ -213,7 +213,7 @@
   duration: Nov, 2003  &mdash; Feb, 2004
   summary: During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage.
   projects:
-    - description: Development of an internal E-commerce like shop for oil related products.
-    - description: Automation of internal web statistics report generation.
+    - description: Automation of internal web statistics report generation
+    - description: Development of an internal E-commerce like shop for oil related products
   languages:
     - Perl
