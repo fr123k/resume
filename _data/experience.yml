@@ -1,12 +1,12 @@
 # Jobs
 
 # Team Lead of Site Reliability Engineering Team
-- company: Data4Life
-  position: Team Lead of Site Reliability Engineering Team
-  duration:  Oct, 2020 &mdash; present
-  summary: 
+- company: "Data4Life"
+  position: "Team Lead of Site Reliability Engineering Team"
+  duration: "Oct, 2020 &mdash; present"
+  summary: ""
   projects:
-    - description: Team Lead 
+    - description: "Team Lead"
   tools:
     - Jira
     - Confluence
@@ -17,12 +17,12 @@
     - AWS
 
 # Senior Site Reliability Engineer
-- company: Data4Life (formely Gesundheitscloud)
-  position: Senior Site Reliability Engineer
-  duration:  Dec, 2019 &mdash; Oct, 2020
-  summary: 
+- company: "Data4Life (formerly Gesundheitscloud)"
+  position: "Senior Site Reliability Engineer"
+  duration: "Dec, 2019 &mdash; Oct, 2020"
+  summary: ""
   projects:
-    - description: Technical Lead
+    - description: "Technical Lead"
   languages:
     - golang
     - Bash 4
@@ -41,12 +41,12 @@
     - PostgreSQL
 
 # Site Reliability Engineer
-- company: Data4Life (formely Gesundheitscloud)
-  position: Site Reliability Engineer
-  duration: Jan, 2018 &mdash; Dec, 2019
+- company: "Data4Life (formerly Gesundheitscloud)"
+  position: "Site Reliability Engineer"
+  duration: "Jan, 2018 &mdash; Dec, 2019"
   summary: 
   projects:
-    - description: Migration from public to private cloud.
+    - description: "Migration from public to private cloud."
   languages:
     - golang
     - Bash 4
@@ -61,12 +61,12 @@
     - Openstack
 
 # Senior Java Software Engineer
-- company: Hasso Plattner Institute
-  position: Senior Java Software Engineer
-  duration:  Sep, 2017 &mdash; Dec, 2017
+- company: "Hasso Plattner Institute"
+  position: "Senior Java Software Engineer"
+  duration: "Sep, 2017 &mdash; Dec, 2017"
   summary: 
   projects:
-    - description: Maintenance and Bug Fixing of a 20 yrs. 
+    - description: "Maintenance and Bug Fixing of a 20 yrs."
   languages:
     - Java
   tools:
@@ -75,15 +75,15 @@
     - Azure
 
 # Senior Java Software Developer
-- company: QualityPark
-  position: Senior Java Software Engineer
-  duration:  Apr, 2015 &mdash; Aug, 2017
+- company: "QualityPark"
+  position: "Senior Java Software Engineer"
+  duration: "Apr, 2015 &mdash; Aug, 2017"
   summary: 
   projects:
-    - description: Maintenance and Bug Fixing of a 20 yrs. old Web Application (C/C++)
-    - description: Migration towards Java Development
-    - description: Advocate for Continuous Integration and Continuous Deployment
-    - description: On Sight Customer Presentation and Support
+    - description: "Maintenance and Bug Fixing of a 20 yrs. old Web Application (C/C++)"
+    - description: "Migration towards Java Development"
+    - description: "Advocate for Continuous Integration and Continuous Deployment"
+    - description: "On Sight Customer Presentation and Support"
   languages:
     - Java
     - JavaScript
@@ -103,23 +103,23 @@
     - Oracle Database
 
 # Unskilled Laborer
-- company: ZAG Zeitarbeits-Gesellschaft GmbH
-  position: Unskilled Laborer
-  duration:  Sep, 2014 &mdash; Feb, 2015
+- company: "ZAG Zeitarbeits-Gesellschaft GmbH"
+  position: "Unskilled Laborer"
+  duration: "Sep, 2014 &mdash; Feb, 2015"
   summary: 
 
 # Senior Software Developer
-- company: Self-employed
-  position: Open Source Developer
-  duration:  Aug, 2013 &mdash; Sept, 2014
+- company: "Self-employed"
+  position: "Open Source Developer"
+  duration: "Aug, 2013 &mdash; Sept, 2014"
   summary: 
   projects:
-    - description: Learning Software Development with Scala and angularjs
-    - description: First experiences with Continuous Integration and Deployment
-    - description: https://github.com/pussinboots/angularjs-crypto
-    - description: https://github.com/pussinboots/unitcover
-    - description: https://github.com/pussinboots/pm
-    - description: https://github.com/pussinboots/vagrant-git
+    - description: "Learning Software Development with Scala and angularjs"
+    - description: "First experiences with Continuous Integration and Deployment"
+    - description: "https://github.com/pussinboots/angularjs-crypto"
+    - description: "https://github.com/pussinboots/unitcover"
+    - description: "https://github.com/pussinboots/pm"
+    - description: "https://github.com/pussinboots/vagrant-git"
   languages:
     - JavaScript
     - Scala
@@ -136,12 +136,12 @@
     - Heroku
 
 # Senior Software Developer
-- company: Deutsche Post AG
-  position: Senior Software Developer
-  duration:  Mar, 2013 &mdash; Aug, 2013
-  summary:
+- company: "Deutsche Post AG"
+  position: "Senior Software Developer"
+  duration: "Mar, 2013 &mdash; Aug, 2013"
+  summary: ""
   projects:
-    - description: B2C Rest API Services/Integrations
+    - description: "B2C Rest API Services/Integrations"
   languages:
     - Java
     - Groovy
@@ -208,12 +208,12 @@
     - MSSQL
 
 # Study Internship
-- company: Total
-  position: Internship
-  duration: Nov, 2003  &mdash; Feb, 2004
-  summary: During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage.
+- company: "Total"
+  position: "Internship"
+  duration: "Nov, 2003  &mdash; Feb, 2004"
+  summary: "During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage."
   projects:
-    - description: Automation of internal web statistics report generation
-    - description: Development of an internal E-commerce like shop for oil related products
+    - description: "Automation of internal web statistics report generation"
+    - description: "Development of an internal E-commerce like shop for oil related products"
   languages:
     - Perl
