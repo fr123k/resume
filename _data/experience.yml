@@ -155,14 +155,14 @@
     - Jetty
 
 # Senior Java Software Developer
-- company: AdClear GmbH
-  position: Senior Java Software Developer
-  duration:  Mar, 2011 &mdash; Oct, 2012
-  summary:
+- company: "AdClear GmbH"
+  position: "Senior Java Software Developer"
+  duration: "Mar, 2011 &mdash; Oct, 2012"
+  summary: "The company AdClear GmbH was founded in March of 2011 in the same month I was hired as an Senior Java Software Developer to lead the Web Application development from the beginning. The company size at this time were around 8 full employees. Most of them i already knew from my time at the zanox AG. My responsibility was the Design of Web Application together with the related Backend Part. Later in the same year an Frontend Developer was hired. He was a fresh graduated student that I onboarded and was his mentor."
   projects:
-    - description: Design and Development of Map Reduce (MongoDB) based analyse and reporting services
-    - description: Design and Development of data access Web Services
-    - description: Design and Development of web application to analyze ecommerce Customer Journeys
+    - description: "Design and Development of Map Reduce (based on MongoDB) analyze and reporting services"
+    - description: "Design and Development of data access Web Services"
+    - description: "Design and Development of web application to analyze e-commerce Customer Journeys"
   languages:
     - Java
     - JavaScript
@@ -178,17 +178,17 @@
     - Root Server
 
 # Senior Java Software Developer
-- company: zanox
-  position: Senior Java Software Developer
-  duration:   Aug, 2006  &mdash; Feb, 2011
-  summary: Hired as working student for the development of an web application with Microsoft C++ cgi framework. Finished the exam and was hired as a Java Software Developer. 2006 &mdash; 2010 migration of core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &mdash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API.
+- company: "AWIN AG (formally zanox AG)"
+  position: "Senior Java Software Developer"
+  duration: "Aug, 2006  &mdash; Feb, 2011"
+  summary: "Hired as working student for the development of an web application with Microsoft C++ based on the cgi interface of IIS 6. Finished the exam and was hired as a Java Software Developer. 2006 &mdash; 2010 migration of the core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &mdash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API."
   projects:
-    - description: Development and maintenance of an public API
-    - description: Conception and development of zanox connect (authentication and authorization)
-    - description: B2B and B2C integration with Web Services (Soap and Rest)
-    - description: Design and development of the core services with SOA (Service Oriented Architecture)
-    - description: Migration to the Java Platform, Enterprise Edition
-    - description: Reverse Engineering of the Legacy System (C++ PRM)
+    - description: "Development and maintenance of an public API"
+    - description: "Conception and development of zanox connect (authentication and authorization)"
+    - description: "B2B and B2C integration with Web Services (Soap and Rest)"
+    - description: "Design and development of the core services with SOA (Service Oriented Architecture)"
+    - description: "Migration to the Java Platform, Enterprise Edition"
+    - description: "Reverse Engineering of the Legacy System (C++ PRM)"
   languages:
     - Java
     - C++
