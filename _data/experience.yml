@@ -135,13 +135,14 @@
   infrastructure:
     - Heroku
 
-# Senior Software Developer
+# Senior Java Software Developer
 - company: "Deutsche Post AG"
-  position: "Senior Software Developer"
+  position: "Senior Java Software Developer"
   duration: "Mar, 2013 &mdash; Aug, 2013"
-  summary: ""
+  summary: "I was working in the partner B2C API team. We were responsible to design and develop an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology.
+  The release process was done together with the Operations department. The team was responsible to provide a working puppet configuration and the rollout was done by the Operations department."
   projects:
-    - description: "B2C Rest API Services/Integrations"
+    - description: "Design and Development of the Rest API Services for B2C"
   languages:
     - Java
     - Groovy
