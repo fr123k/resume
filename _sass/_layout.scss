@@ -4,11 +4,14 @@
 // Layout from Primer (https://github.com/primer/primer/blob/master/scss/_layout.scss)
 
 // Fixed-width, centered column for site content.
-.container {
-  width: $container-width;
-  margin-right: auto;
-  margin-left: auto;
-  @include clearfix;
+
+@media (min-width: 48em) {
+  .container {
+    width: $container-width;
+    margin-right: auto;
+    margin-left: 18rem;
+    @include clearfix;
+  }
 }
 
 // Grid system
