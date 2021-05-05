@@ -32,7 +32,7 @@ resume_contact_address:         ""
 resume_header_contact_info:     ""
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>Everything seams to be impossible until you did it.</p>"
+resume_header_intro: "<p>Everything seems to be impossible until you did it.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
