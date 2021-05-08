@@ -1,0 +1,39 @@
+description: "Personal Work Principles"
+principles:
+- title: "Meeting"
+  rules:
+    - title: "Don’t take the time and attention of work colleagues for granted."
+      rules: 
+        - "They has to be valued and earned constantly."
+        - "Be clear at the start of a meeting. What is the meeting about and for who ?"
+
+- title: "Change"
+  rules:
+    - title: "The power of change and adaptation."
+      rules:
+        - "Starts with yourself"
+
+- title: "Efficiency"
+  rules:
+    - title: "Just work Smart."
+      rules:
+        - "Don’t repeat over and over the same discussion and conversations. Break repeating cycles they are mostly number one time consumers."
+        - "It's all about the ratio of time and outcome."
+
+- title: "Tools / People"
+  rules:
+    - title: "Tools have to follow people and not the people the tools."
+      rules:
+        - "The number one priority of tools is to help people to be more productive and save time instead of cost time."
+        - "If tools are not in line with point a) then drop them or replace them with an other tool."
+
+- title: "Leadership"
+  rules:
+    - title: "It’s not about you."
+      rules:
+        - "Focus has to be on the people to lead."
+        - "Help them to grow."
+    - title: "It’s all about you."
+      rules:
+        - "Be authentic and lead by example."
+        - "Don’t expect more from others then from yourself"
