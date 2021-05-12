@@ -1,0 +1,10 @@
+@media print {
+  ul.resume-print-item-list {
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+}
