@@ -170,12 +170,14 @@
       }
     }
   }
-  ul.resume-item-list {
-    margin: 0;
-    padding: 0;
-    padding-inline-start: 0;
-    li {
-      list-style-type: none;
+  @media screen and (max-width: 48em) {
+    ul.resume-item-list {
+      margin: 0;
+      padding: 0;
+      padding-inline-start: 0;
+      li {
+        list-style-type: none;
+      }
     }
   }
   @media (min-width: 48em) {
@@ -186,8 +188,6 @@
       }
     }
   }
-
-  .resume-item-copy { margin: .75rem 0 0; }
 }
 
 // footer styles

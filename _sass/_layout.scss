@@ -9,7 +9,6 @@
   .container {
     width: $container-width;
     margin-right: auto;
-    margin-left: 18rem;
     @include clearfix;
   }
 }

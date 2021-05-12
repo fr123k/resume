@@ -21,12 +21,15 @@ body{
 .wrapper:after { content:""; display:table; }
 .wrapper:after { clear: both; }
 .wrapper {
-  max-width: 728px;
-  padding: 0 24px;
-  margin: 0 auto;
-  zoom: 1;
+  padding: 46px;
 }
-
+@media (min-width: 48em) {
+  .wrapper {
+    max-width: 80%;
+    margin-left: 18rem;
+    zoom: 1;
+  }
+}
 // clearfix (now called group,
 // via http://css-tricks.com/snippets/css/clear-fix/)
 .group:before,
