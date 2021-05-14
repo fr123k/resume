@@ -59,11 +59,13 @@
 
           {% for job in site.data.experience %}
           <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-            <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-            <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-            <p class="resume-item-copy">{{ job.summary }}</p>
+            <div class="unbreakable">
+              <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
+              <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+              <p class="resume-item-copy">{{ job.summary }}</p>
+            </div>
             {% if job.projects %}
-            <ul class="resume-item-list">
+            <ul class="resume-item-list unbreakable">
               {% for project in job.projects %}
               <li>{{ project.description }}</li>
               {% endfor %}
@@ -227,15 +229,17 @@
         <!-- begin Principles -->
         <section class="content-section">
 
-          <header class="section-header">
-            <h2 id="association">Work Principles</h2>
-          </header>
+          <div class="unbreakable">
+            <header class="section-header">
+              <h2 id="association">Work Principles</h2>
+            </header>
 
-          <div class="resume-item">
-            <p class="resume-item-copy">{{ site.data.principles.description }}</p>
+            <div class="resume-item">
+              <p class="resume-item-copy">{{ site.data.principles.description }}</p>
+            </div>
           </div>
           {% for principle in site.data.principles.principles %}
-          <div class="resume-item">
+          <div class="resume-item unbreakable">
             <h3 class="resume-item-title" itemprop="name">{{ principle.title }}</h3>
             {% for rule in principle.rules %}
             <h4 class="resume-item-details" itemprop="description">{{ rule.title }}</h4>
