@@ -1,46 +1,144 @@
 .print-only { display: none !important }
 
+// @media print {
+//   .no-print { display: none !important }
+//   .print-only { display: block !important }
+//   body { font-size: 12px; line-height: 1rem; }
+//   .page-header { padding: 1rem 0 .2rem;
+//     .header-name {
+//       @include sans_bold;
+//       font-size: 2rem;
+//       margin: 0 0 .2rem;
+//     }
+//   }
+//   ul.resume-print-item-list {
+//     margin: 0;
+//     padding: 0;
+//     padding-inline-start: 0;
+//     li {
+//       list-style-type: none;
+//     }
+//   }
+// }
+
+/**
+ * Print Stylesheet fuer Deinewebsite.de
+* @version         1.0
+* @lastmodified    16.06.2016
+*/
+
 @media print {
   .no-print { display: none !important }
   .print-only { display: block !important }
-  body { font-size: 12px; line-height: 1rem; }
-  .page-header { padding: 1rem 0 .2rem;
-    .header-name {
-      @include sans_bold;
-      font-size: 2rem;
-      margin: 0 0 .2rem;
-    }
+  .content, .page {
+    width: 100%; 
+    margin: 0; 
+    float: none;
   }
-  ul.resume-print-item-list {
-    margin: 0;
-    padding: 0;
-    padding-inline-start: 0;
-    li {
-      list-style-type: none;
-    }
+
+  /** Seitenränder einstellen */
+  @page { margin: 2cm }
+  
+  /* Font auf 16px/13pt setzen, Background auf Weiß und Schrift auf Schwarz setzen.*/
+  /* Das spart Tinte */
+  body {
+    font: 13pt Georgia, "Times New Roman", Times, serif;
+    line-height: 1.3;
+    background: #fff !important;
+    color: #000;
   }
-  // .section-header {
-  //   @include section_border_thin;
-  //   margin-bottom: 1rem;
-  //   h2 { font-size: 1.2rem; line-height: 1.5rem; }
-  // }
-  // .content-section {
-  //   margin: 0 0 1rem;
-  //   .resume-item { margin-bottom: 1rem; }
-  //   .resume-item-title {
-  //     font-size: 16px;
-  //     line-height: .7em;
-  //   }
 
-  //   .resume-item-details {
-  //     font-size: 12px;
-  //     margin: 0 0 .75rem;
-  //     line-height: .7em;
-  //     font-style:italic;
+  h1 {
+    font-size: 24pt;
+  }
 
-  //     &.award-title {
-  //       font-size: 11px;
-  //     }
-  //   }
-  // }
+  h2, h3, h4 {
+    font-size: 14pt;
+    margin-top: 25px;
+  }
+
+  /* Alle Seitenumbrüche definieren */
+  a {
+      page-break-inside:avoid
+  }
+  blockquote {
+      page-break-inside: avoid;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after:avoid;
+    page-break-inside:avoid
+  }
+  img {
+    page-break-inside:avoid;
+    page-break-after:avoid;
+  }
+  table, pre { page-break-inside:avoid }
+  ul, ol, dl  { page-break-before:avoid }
+
+  /* Linkfarbe und Linkverhalten darstellen */
+  a:link, a:visited, a {
+    background: transparent;
+    color: #520;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  a {
+      page-break-inside:avoid
+  }
+
+  a[href^=http]:after {
+        content:" <" attr(href) "> ";
+  }
+  
+  .a:after > img {
+     content: "";
+  }
+
+  article a[href^="#"]:after {
+     content: "";
+  }
+
+  a:not(:local-link):after {
+     content:" <" attr(href) "> ";
+  }
+
+  /* Benutzerdefinierte Nachrichten vor und nach dem Inhalt einfügen */
+  .entry:after {
+    content: "\ Alle Rechte vorbehalten. (c) 2014 - 2016 TechBrain - techbrain.de";
+    color: #999 !important;
+    font-size: 1em;
+    padding-top: 30px;
+  }
+  #header:before {
+    content: "\ Vielen herzlichen Dank für das Ausdrucken unseres Artikels. Wir hoffen, dass auch andere Artikel von uns Ihr Interesse wecken können.";
+    color: #777 !important;
+    font-size: 1em;
+    padding-top: 30px;
+    text-align: center !important;
+  }
+  
+  /* Wichtige Elemente definieren */
+  p, address, li, dt, dd, blockquote {
+    font-size: 100%
+  }
+  
+  /* Zeichensatz fuer Code Beispiele */
+  code, pre { 
+    font-family: "Courier New", Courier, mono
+  }
+  
+  ul, ol {
+    list-style: square; margin-left: 18pt;
+    margin-bottom: 20pt;
+  }
+  
+  li {
+    line-height: 1.6em;
+  }
+
+  .icon-links { 
+    text-align: left !important;
+  }
 }
