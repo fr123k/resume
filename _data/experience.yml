@@ -181,7 +181,7 @@
     - Apache Maven
     - Jenkins
   infrastructure:
-    - Tomcat 6
+    - Tomcat
     - MongoDB
     - Root Server
 
@@ -210,7 +210,7 @@
     - Jenkins
   infrastructure:
     - JBoss 4
-    - Tomcat 6
+    - Tomcat
     - memcached
     - lighttpd
     - MSSQL
