@@ -102,10 +102,11 @@
       @include transition(all .2s ease);
     }
   }
+}
 
-  .icon {
-    height: 28px;
-  }
+.icon {
+  height: 26px;
+  vertical-align: middle;
 }
 
 .contact-button {
