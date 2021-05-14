@@ -15,7 +15,7 @@
   /* Font auf 16px/13pt setzen, Background auf Weiß und Schrift auf Schwarz setzen.*/
   /* Das spart Tinte */
   body {
-    font: 13pt Georgia, "Times New Roman", Times, serif;
+    font: 12pt "Avenir", Georgia, "Times New Roman", Times, serif !important;
     line-height: 1.3;
     background: #fff !important;
     color: #000;
