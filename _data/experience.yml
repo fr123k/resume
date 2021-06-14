@@ -3,7 +3,7 @@
 # Team Lead of Site Reliability Engineering Team
 - company: "Data4Life"
   position: "Team Lead of Site Reliability Engineering Team"
-  duration: "Oct, 2020 &mdash; present"
+  duration: "Oct, 2020 &ndash; present"
   summary: ""
   projects:
     - description: "Team Lead"
@@ -19,7 +19,7 @@
 # Senior Site Reliability Engineer
 - company: "Data4Life (formerly Gesundheitscloud)"
   position: "Senior Site Reliability Engineer"
-  duration: "Dec, 2019 &mdash; Oct, 2020"
+  duration: "Dec, 2019 &ndash; Oct, 2020"
   summary: ""
   projects:
     - description: "Technical Lead"
@@ -43,7 +43,7 @@
 # Site Reliability Engineer
 - company: "Gesundheitscloud"
   position: "Site Reliability Engineer"
-  duration: "Jan, 2018 &mdash; Dec, 2019"
+  duration: "Jan, 2018 &ndash; Dec, 2019"
   summary: 
   projects:
     - description: "Migration from public to private cloud."
@@ -63,7 +63,7 @@
 # Senior Java Software Engineer
 - company: "Hasso-Plattner-Institute"
   position: "Senior Java Software Engineer"
-  duration: "Sep, 2017 &mdash; Dec, 2017"
+  duration: "Sep, 2017 &ndash; Dec, 2017"
   summary: 
   projects:
     - description: "Maintenance and Bug Fixing of a 20 yrs."
@@ -77,7 +77,7 @@
 # Senior Java Software Developer
 - company: "QualityPark"
   position: "Senior Java Software Engineer"
-  duration: "Apr, 2015 &mdash; Aug, 2017"
+  duration: "Apr, 2015 &ndash; Aug, 2017"
   summary: 
   projects:
     - description: "Maintenance and Bug Fixing of a 20 yrs. old Web Application (C/C++)"
@@ -105,20 +105,20 @@
 # Unskilled Laborer
 - company: "ZAG Zeitarbeits-Gesellschaft GmbH"
   position: "Unskilled Laborer"
-  duration: "Sep, 2014 &mdash; Feb, 2015"
-  summary: I literly took time off from working as an Developer and decided to work as an unskilled laborer. This short change of profession also helped me with my personal growth. It enhanced my perspective towards physical hard work and also helped my to loss some weight as well.
+  duration: "Sep, 2014 &ndash; Feb, 2015"
+  summary: I literally took time off from working as an Developer and decided to work as an unskilled laborer. This short change of profession also helped me with my personal growth. It enhanced my perspective towards physical hard work and also helped my to loss some weight as well.
   projects:
     - description: "2 month working in a computer retail storage house"
-    - description: "1 week working as a waitress on an the InnoTrans 2014 exhibition"
+    - description: "1 week working as a waitress on the InnoTrans 2014 exhibition"
     - description: "1 week as a mover for office spaces"
-    - description: "1 month work in a shoes storehouse"
+    - description: "1 month work in a shoe's storehouse"
 
 
 
 # Senior Software Developer
 - company: "Self-employed"
   position: "Open Source Developer"
-  duration: "Aug, 2013 &mdash; Sept, 2014"
+  duration: "Aug, 2013 &ndash; Sept, 2014"
   summary: 
   projects:
     - description: "Learning Software Development with Scala and angularJS"
@@ -145,7 +145,7 @@
 # Senior Java Software Developer
 - company: "Deutsche Post AG"
   position: "Senior Java Software Developer"
-  duration: "Mar, 2013 &mdash; Aug, 2013"
+  duration: "Mar, 2013 &ndash; Aug, 2013"
   summary: "I was working in the partner B2C API team. We were responsible to design and develop an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology.
   The release process was done together with the Operations department. The team was responsible to provide a working puppet configuration and the rollout was done by the Operations department."
   projects:
@@ -165,8 +165,8 @@
 # Senior Java Software Developer
 - company: "AdClear GmbH"
   position: "Senior Java Software Developer"
-  duration: "Mar, 2011 &mdash; Oct, 2012"
-  summary: "The company AdClear GmbH was founded in March of 2011 in the same month I was hired as an Senior Java Software Developer to lead the Web Application development from the beginning. The company size at this time were around 8 full employees. Most of them i already knew from my time at the zanox AG. My responsibility was the Design of Web Application together with the related Backend Part. Later in the same year an Frontend Developer was hired. He was a fresh graduated student that I onboarded and was his mentor."
+  duration: "Mar, 2011 &ndash; Oct, 2012"
+  summary: "The company AdClear GmbH was founded in March of 2011 in the same month I was hired as an Senior Java Software Developer to lead the Web Application development from the beginning. The company size at this time were around 8 full employees. Most of them i already knew from my time at the zanox AG. My responsibility was the Design of Web Application together with the related Backend Part. Later in the same year an Frontend Developer was hired. He was a fresh graduated student that I on boarded and mentor him."
   projects:
     - description: "Design and Development of Map Reduce (based on MongoDB) analyze and reporting services"
     - description: "Design and Development of data access Web Services"
@@ -188,8 +188,8 @@
 # Senior Java Software Developer
 - company: "AWIN AG (formally zanox AG)"
   position: "Senior Java Software Developer"
-  duration: "Aug, 2006  &mdash; Feb, 2011"
-  summary: "Hired as working student for the development of an web application with Microsoft C++ based on the cgi interface of IIS 6. Finished the exam and was hired as a Java Software Developer. 2006 &mdash; 2010 migration of the core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &mdash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API."
+  duration: "Aug, 2006  &ndash; Feb, 2011"
+  summary: "Hired as working student for the development of an web application with Microsoft C++ based on the cgi interface of IIS 6. Finished the exam and was hired as a Java Software Developer. 2006 &dash; 2010 migration of the core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &dash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API."
   projects:
     - description: "Development and maintenance of an public API"
     - description: "Conception and development of zanox connect (authentication and authorization)"
@@ -218,7 +218,7 @@
 # Study Internship
 - company: "Total"
   position: "Internship"
-  duration: "Nov, 2003  &mdash; Feb, 2004"
+  duration: "Nov, 2003  &ndash; Feb, 2004"
   summary: "During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage."
   projects:
     - description: "Automation of internal web statistics report generation"
