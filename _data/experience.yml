@@ -78,7 +78,7 @@
 - company: "QualityPark"
   position: "Senior Java Software Engineer"
   duration: "Apr, 2015 &ndash; Aug, 2017"
-  summary: "The company QualityPark develop, maintain and customize the Micro Focus Dimensions RM (Requirement Management) solution for enterprise customers. Part of my work was to integrate new features and improvement into the core of the Dimensions RM solution. I was responsible for the Design, Implementation, Testing and Integration of the Java based components into the core of the Dimensions RM solution. I was the Backend developer in the Java team together with a frontend developer that did the web application related implementation as (CSS, HTML, Javascript). I also gave product presentation at the customer facilities together with technical support and feedback."
+  summary: "The company QualityPark develop, maintain and customize the Micro Focus Dimensions RM (Requirement Management) solution for enterprise customers. Part of my work was to integrate new features and improvement into the core of the Dimensions RM solution. I was responsible for the Design, Implementation, Testing and Integration of the Java based components into the core of the Dimensions RM solution. I was the Backend developer in the Java team together with a frontend developer that did the web application related implementations as (CSS, HTML, JavaScript). I also gave product presentation at the customer facilities together with technical support and feedback."
   projects:
     - description: "Maintenance and Bug Fixing of the 20 years+ Dimensions RM solution (C/C++)"
     - description: "Reverse Engineering Core Components as Database Access and Webservice API with Java"
