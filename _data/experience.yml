@@ -6,7 +6,11 @@
   duration: "Oct, 2020 &ndash; present"
   summary: ""
   projects:
-    - description: "Team Lead"
+    - description: "Lead of an 4 people (+1 student) Site Reliability Engineering Team"
+    - description: "Support People Growth (People Management)"
+    - description: "Process and Documentation"
+    - description: "Cross Team/Department's Alignment"
+    - description: "RoadMap and Resource Planning"
   tools:
     - Jira
     - Confluence
@@ -29,48 +33,59 @@
     - python
   tools:
     - Ansible
-    - Hashicorp Vault
-    - Hashicorp Terraform
     - Hashicorp Packer
+    - Hashicorp Terraform
     - Hashicorp Vagrant
+    - Hashicorp Vault
     - Jenkins
   infrastructure:
     - Azure
-    - Openstack
     - AWS
+    - Openstack
     - PostgreSQL
 
 # Site Reliability Engineer
 - company: "Gesundheitscloud"
   position: "Site Reliability Engineer"
   duration: "Jan, 2018 &ndash; Dec, 2019"
-  summary: 
+  summary: "Soon after my first months it became clear too us that i like to maintain also complex systems like a kubernetes or database cluster. So i switched from a DevOPS Engineer to a Site Reliability Engineer role. The company got attention and the product grow from a Proof of Concept to a first prototype. Regarding the compliance and security needs the company decided to move from Public Cloud offering to a Private Cloud. We evaluated the following two offerings Azure Stack from Microsoft and Openstack. First we migrated from Azure to Azure Stack and after almost a year we migrated to the final OPenstack system."
   projects:
-    - description: "Migration from public to private cloud."
+    - description: "Migration from Azure Stack to Openstack."
+    - description: "Migration from Azure Cloud to Azure Stack."
+    - description: "Design and Implementation of an kubernetes API Gateway"
+    - description: "Datadog agent Integration"
+
   languages:
     - golang
     - Bash 4
     - python
+    - Java
   tools:
+    - Hashicorp Vagrant
     - Hashicorp Vault
     - Hashicorp Terraform
     - Jenkins
+    - Ansible
   infrastructure:
+    - nginx
     - Azure
     - AzureStack
     - Openstack
 
-# Senior Java Software Engineer
+# Senior DevOps Engineer
 - company: "Hasso-Plattner-Institute"
-  position: "Senior Java Software Engineer"
+  position: "Senior DevOps Engineer"
   duration: "Sep, 2017 &ndash; Dec, 2017"
-  summary: 
+  summary: "My first responsibility was it to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI were used as a hosted Continuous Integration service."
   projects:
-    - description: "Maintenance and Bug Fixing of a 20 yrs."
+    - description: "Design and Implementation of central CI/CD pipelines."
+    - description: "Deployment Pipeline Migration of the kubernetes microservices."
   languages:
-    - Java
+    - Bash 4
+    - terraform
   tools:
-    - Travis CI 
+    - Travis CI
+    - Helm
   infrastructure:
     - Azure
 
