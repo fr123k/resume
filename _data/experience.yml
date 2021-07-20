@@ -7,18 +7,15 @@
   summary: ""
   projects:
     - description: "Lead of an 4 people (+1 student) Site Reliability Engineering Team"
-    - description: "Support People Growth (People Management)"
-    - description: "Process and Documentation"
-    - description: "Cross Team/Department's Alignment"
-    - description: "RoadMap and Resource Planning"
+    - description: "Support people growth (People Management)"
+    - description: "Process and documentation"
+    - description: "Cross team/department's Alignment"
+    - description: "RoadMap and resource planning"
   tools:
     - Jira
     - Confluence
     - Slack
-  infrastructure:
-    - Azure
-    - Openstack
-    - AWS
+    - Github
 
 # Senior Site Reliability Engineer
 - company: "Data4Life (formerly Gesundheitscloud)"
@@ -50,10 +47,10 @@
   duration: "Jan, 2018 &ndash; Dec, 2019"
   summary: "Soon after my first months it became clear too us that i like to maintain also complex systems like a kubernetes or database cluster. So i switched from a DevOPS Engineer to a Site Reliability Engineer role. The company got attention and the product grow from a Proof of Concept to a first prototype. Regarding the compliance and security needs the company decided to move from Public Cloud offering to a Private Cloud. We evaluated the following two offerings Azure Stack from Microsoft and Openstack. First we migrated from Azure to Azure Stack and after almost a year we migrated to the final OPenstack system."
   projects:
-    - description: "Migration from Azure Stack to Openstack."
-    - description: "Migration from Azure Cloud to Azure Stack."
-    - description: "Design and Implementation of an kubernetes API Gateway"
-    - description: "Datadog agent Integration"
+    - description: "Migration from Azure Stack to Openstack"
+    - description: "Migration from Azure Cloud to Azure Stack"
+    - description: "Design and implementation of an kubernetes API Gateway"
+    - description: "Datadog agent integration"
 
   languages:
     - golang
@@ -78,8 +75,8 @@
   duration: "Sep, 2017 &ndash; Dec, 2017"
   summary: "My first responsibility was it to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI were used as a hosted Continuous Integration service."
   projects:
-    - description: "Design and Implementation of central CI/CD pipelines."
-    - description: "Deployment Pipeline Migration of the kubernetes microservices."
+    - description: "Deployment pipeline migration for the kubernetes microservices"
+    - description: "Design and implementation of central CI/CD pipelines"
   languages:
     - Bash 4
     - terraform
@@ -95,10 +92,10 @@
   duration: "Apr, 2015 &ndash; Aug, 2017"
   summary: "The company QualityPark develop, maintain and customize the Micro Focus Dimensions RM (Requirement Management) solution for enterprise customers. Part of my work was to integrate new features and improvement into the core of the Dimensions RM solution. I was responsible for the Design, Implementation, Testing and Integration of the Java based components into the core of the Dimensions RM solution. I was the Backend developer in the Java team together with a frontend developer that did the web application related implementations as (CSS, HTML, JavaScript). I also gave product presentation at the customer facilities together with technical support and feedback."
   projects:
-    - description: "Maintenance and Bug Fixing of a 20 years+ Dimensions RM solution (C/C++)"
-    - description: "Reverse Engineering of Core Components like Database Access and Webservice API's with Java"
-    - description: "Design, Implementation and Testing of Java components according to CI/CD principals"
     - description: "On Sight Customer Presentation and Support"
+    - description: "Design, implementation and testing of Java components according to CI/CD principals"
+    - description: "Reverse engineering of core components like database access and webservice API's with Java"
+    - description: "Maintenance and bug fixing of a 20 years+ Dimensions RM solution (C/C++)"
   languages:
     - Java
     - JavaScript
@@ -165,7 +162,7 @@
   summary: "I was working in the partner B2C API team. We were responsible to design and develop an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology.
   The release process was done together with the Operations department. The team was responsible to provide a working puppet configuration and the rollout was done by the Operations department."
   projects:
-    - description: "Design and Development of the Rest API Services for B2C"
+    - description: "Design and implementation of the Rest API Services for B2C"
   languages:
     - Java
     - Groovy
@@ -184,9 +181,9 @@
   duration: "Mar, 2011 &ndash; Oct, 2012"
   summary: "The company AdClear GmbH was founded in March of 2011 in the same month I was hired as an Senior Java Software Developer to lead the Web Application development from the beginning. The company size at this time were around 8 full employees. Most of them i already knew from my time at the zanox AG. My responsibility was the Design of Web Application together with the related Backend Part. Later in the same year an Frontend Developer was hired. He was a fresh graduated student that I on boarded and mentor him."
   projects:
-    - description: "Design and Development of Map Reduce (based on MongoDB) analyze and reporting services"
-    - description: "Design and Development of data access Web Services"
-    - description: "Design and Development of web application to analyze e-commerce Customer Journeys"
+    - description: "Design and implementation of Map Reduce (based on MongoDB) analyze and reporting services"
+    - description: "Design and implementation of data access Web Services"
+    - description: "Design and implementation of web application to analyze e-commerce Customer Journeys"
   languages:
     - Java
     - JavaScript
@@ -208,11 +205,11 @@
   summary: "Hired as working student for the development of an web application with Microsoft C++ based on the cgi interface of IIS 6. Finished the exam and was hired as a Java Software Developer. 2006 &dash; 2010 migration of the core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &dash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API."
   projects:
     - description: "Development and maintenance of an public API"
-    - description: "Conception and development of zanox connect (authentication and authorization)"
+    - description: "Research and development of zanox connect (authentication and authorization)"
     - description: "B2B and B2C integration with Web Services (Soap and Rest)"
-    - description: "Design and development of the core services with SOA (Service Oriented Architecture)"
+    - description: "Design and implementation of the core services with SOA (Service Oriented Architecture)"
     - description: "Migration to the Java Platform, Enterprise Edition"
-    - description: "Reverse Engineering of the Legacy System (C++ PRM)"
+    - description: "Reverse engineering of the Legacy System (C++ PRM)"
   languages:
     - Java
     - C++
