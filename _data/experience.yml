@@ -25,9 +25,9 @@
   projects:
     - description: "Technical Lead"
   languages:
-    - golang
+    - Golang
     - Bash 4
-    - python
+    - Python
   tools:
     - Ansible
     - Hashicorp Packer
@@ -79,8 +79,8 @@
     - description: "Design and implementation of central CI/CD pipelines"
   languages:
     - Bash 4
-    - terraform
   tools:
+    - Hashicorp Terraform
     - Travis CI
     - Helm
   infrastructure:
@@ -112,7 +112,7 @@
     - Apache Maven
     - Visual Studio Code
   infrastructure:
-    - Tomcat 7
+    - Tomcat
     - Oracle Database
 
 # Unskilled Laborer
@@ -125,8 +125,6 @@
     - description: "1 week working as a waitress on the InnoTrans 2014 exhibition"
     - description: "1 week as a mover for office spaces"
     - description: "1 month work in a shoe's storehouse"
-
-
 
 # Senior Software Developer
 - company: "Self-employed"
@@ -149,7 +147,7 @@
     - Apache Wicket
     - NodeJS
   tools:
-    - sbt
+    - Scala sbt
     - Travis CI
     - NodeJS
   infrastructure:
