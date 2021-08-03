@@ -95,21 +95,21 @@
             </div>
             <div class="grid">
               <div class="col-1-2">
-                {% if job.frameworks %}
-                <h4 class="resume-item-subtitle">Frameworks</h4>
-                <ul class="resume-print-item-list">
-                  {% for framework in job.frameworks %}
-                  <li>{{ framework }}</li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-              </div>
-              <div class="col-1-2">
                 {% if job.infrastructure %}
                 <h4 class="resume-item-subtitle">Infrastructure</h4>
                 <ul class="resume-print-item-list">
                   {% for server in job.infrastructure %}
                   <li>{{ server }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+              <div class="col-1-2">
+                {% if job.frameworks %}
+                <h4 class="resume-item-subtitle">Frameworks</h4>
+                <ul class="resume-print-item-list">
+                  {% for framework in job.frameworks %}
+                  <li>{{ framework }}</li>
                   {% endfor %}
                 </ul>
                 {% endif %}
