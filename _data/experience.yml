@@ -134,10 +134,10 @@
   projects:
     - description: "Learning Software Development with Scala and angularJS"
     - description: "First experiences with Continuous Integration and Deployment"
-    - description: "https://github.com/pussinboots/angularjs-crypto"
-    - description: "https://github.com/pussinboots/unitcover"
-    - description: "https://github.com/pussinboots/pm"
-    - description: "https://github.com/pussinboots/vagrant-git"
+    - description: "<a href=\"https://github.com/pussinboots/angularjs-crypto\">angularjs-crypto</a>"
+    - description: "<a href=\"https://github.com/pussinboots/unitcover\">unitcover</a>"
+    - description: "<a href=\"https://github.com/pussinboots/pm\">pm</a>"
+    - description: "<a href=\"https://github.com/pussinboots/vagrant-git\">vagrant-git-crypto</a>"
   languages:
     - JavaScript
     - Scala
