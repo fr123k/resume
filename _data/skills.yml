@@ -1,10 +1,10 @@
 # Skills
 
 - skill: Mentorship
-  description: I have several years of experience to guide and mentor people and organisations.
+  description: "I have several years of experience to guide and mentor people and organizations."
 
-- skill: Process Management
-  description: I am in favor of 
+- skill: Software/System Architecture
+  description: "With the 15+ years of experience in software development. I have developed an intuition for reasonable good and bad architecture. In my opinion a reasonable good architecture requires a good quality of technical and non technical requirements to be known upfront. The organizations communications structure in most of the case is also mirrored in the Software/System Architecture especially if its designed and implemented by multiple teams (Conways law). "
 
-- skill: Architecture
-  description: 
+#- skill: Software Project Management
+#  description:
