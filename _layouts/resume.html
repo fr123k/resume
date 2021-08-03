@@ -320,20 +320,20 @@
           </div>
           <div class="grid">
             <div class="col-1-2">
-              {% assign all_frameworks = site.data.experience | map: "frameworks" | compact | uniq | sort %}
-              <h4 class="resume-item-subtitle">Frameworks</h4>
-              <ul class="resume-item-list">
-                {% for framework in all_frameworks %}
-                  <li>{{ framework }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="col-1-2">
               {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
               <h4 class="resume-item-subtitle">Infrastructure</h4>
               <ul class="resume-item-list">
                 {% for server in all_infrastructure %}
                   <li>{{ server }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-1-2">
+              {% assign all_frameworks = site.data.experience | map: "frameworks" | compact | uniq | sort %}
+              <h4 class="resume-item-subtitle">Frameworks</h4>
+              <ul class="resume-item-list">
+                {% for framework in all_frameworks %}
+                  <li>{{ framework }}</li>
                 {% endfor %}
               </ul>
             </div>
