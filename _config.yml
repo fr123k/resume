@@ -26,7 +26,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Frank Ittermann"
-resume_title:                   "Team Lead Site Reliability Engineering"
+resume_title:                   "Team Lead / Senior Site Reliability Engineer / Senior Backend Engineer"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "frank.ittermann@yahoo.com"
