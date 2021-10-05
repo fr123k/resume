@@ -54,13 +54,13 @@
 - company: "Gesundheitscloud"
   position: "Site Reliability Engineer"
   duration: "Jan, 2018 &ndash; Dec, 2019"
-  summary: "Soon after my first months it became clear too us that i like to maintain also complex systems like a kubernetes or database cluster. So i switched from a DevOPS Engineer to a Site Reliability Engineer role. The company got attention and the product grow from a Proof of Concept to a first prototype. Regarding the compliance and security needs the company decided to move from Public Cloud offering to a Private Cloud. We evaluated the following two offerings Azure Stack from Microsoft and Openstack. First we migrated from Azure to Azure Stack and after almost a year we migrated to the final OPenstack system."
+  summary: "Soon after my first months it became clear too us that i like to maintain also complex systems like a kubernetes or database cluster. So i switched from a DevOPS Engineer to a Site Reliability Engineer role. The company got attention and the product grow from a Proof of Concept to a first prototype. Regarding the compliance and security needs the company decided to move from Public Cloud offering to a Private Cloud setup. We evaluated the following two offerings Azure Stack from Microsoft and Openstack. First we migrated from Azure to Azure Stack and after almost a year we migrated finally to Openstack."
   projects:
     - description: "Migration from Azure Stack to Openstack"
     - description: "Migration from Azure Cloud to Azure Stack"
     - description: "Design and implementation of an kubernetes API Gateway"
-    - description: "Datadog agent integration"
-
+    - description: "Datadog agent integration and maintenance"
+    - description: "Participate in the audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
   languages:
     - golang
     - Bash 4
