@@ -2,15 +2,17 @@
 
 # Team Lead of Site Reliability Engineering Team
 - company: "Data4Life"
-  position: "Team Lead of Site Reliability Engineering Team"
-  duration: "Oct, 2020 &ndash; present"
+  position: "Team Lead / Senior Site Reliability Engineer"
+  duration: "Oct, 2020 &ndash; Oct 2021"
   summary: ""
   projects:
-    - description: "Lead of an 4 people (+1 student) Site Reliability Engineering Team"
-    - description: "Support people growth (People Management)"
-    - description: "Process and documentation"
-    - description: "Cross team/department's Alignment"
-    - description: "RoadMap and resource planning"
+    - description: "Leading of an Site Reliability Engineering four person team"
+    - description: "People and Growth Management"
+    - description: "Process and Documentation Management"
+    - description: "Cross Functional Collaboration Management"
+    - description: "Resource Management and Roadmap Planning"
+    - description: "Add feature to skip uploading glance image during a Openstack packer build (upstream)"
+    - description: "Participate in the re-audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
   tools:
     - Jira
     - Confluence
