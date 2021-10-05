@@ -1,12 +1,11 @@
 <div class="sidebar no-print">
     {% if site.resume_section_skills %}
+    <header class="">
+        <img src="/images/logo_fr123k_transparent.png" alt="logo" class="logo" itemprop="image"/>
+    </header>
     <!-- begin Skills -->
     <section class="content-section">
-
-        <header class="">
-            <img src="/images/logo_fr123k_transparent.png" alt="logo" class="logo" itemprop="image"/>
-            <h2>Technical Experience</h2>
-        </header>
+        <h2>Technical Experience</h2>
         {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
         <h4 class="resume-item-subtitle">Programming Languages</h4>
 
