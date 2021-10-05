@@ -22,10 +22,17 @@
 # Senior Site Reliability Engineer
 - company: "Data4Life (formerly Gesundheitscloud)"
   position: "Senior Site Reliability Engineer"
-  duration: "Dec, 2019 &ndash; Oct, 2020"
-  summary: ""
+  duration: "Jan, 2020 &ndash; Oct, 2020"
+  summary: "The Openstack migration finished and now it was time to focus on reliability, automation, monitoring and logging. Focus on improvements for daily operations and recovery."
   projects:
-    - description: "Technical Lead"
+    - description: "Setup lets encrypt cert manager with ansible"
+    - description: "Migration to the ansible k8s module instead of the kubectl command"
+    - description: "Improve cloud-init datasource openstack configuration to be more resilient"
+    - description: "Improve Grafana dashboards for better visibility."
+    - description: "Design and implementation of Living Documentation of Openstack resources within Atlassian confluence by leverage CI/CD"
+    - description: "Design and implementation to maintain PostgreSQL clusters and user accounts with ansible"
+    - description: "Design and implementation to share Openstack glance images across different Openstack installations"
+    - description: "Participate in the re-audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
   languages:
     - Golang
     - Bash 4
