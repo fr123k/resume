@@ -84,7 +84,7 @@
   duration: "Sep, 2017 &ndash; Dec, 2017"
   summary: "My first responsibility was it to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI were used as a hosted Continuous Integration service."
   projects:
-    - description: "Deployment pipeline migration for the kubernetes microservices"
+    - description: "Implementation of deployment pipeline for kubernetes microservices with Travis CI"
     - description: "Design and implementation of central CI/CD pipelines"
   languages:
     - Bash 4
@@ -103,7 +103,7 @@
   projects:
     - description: "On Sight Customer Presentation and Support"
     - description: "Design, implementation and testing of Java components according to CI/CD principals"
-    - description: "Reverse engineering of core components like database access and webservice API's with Java"
+    - description: "Reverse engineering of core components like database access and web service API's with Java"
     - description: "Maintenance and bug fixing of a 20 years+ Dimensions RM solution (C/C++)"
   languages:
     - Java
