@@ -6,13 +6,13 @@
   duration: "Oct, 2020 &ndash; Oct 2021"
   summary: ""
   projects:
-    - description: "Leading of an Site Reliability Engineering four person team"
+    - description: "Management of a four-person Site Reliability Engineering team"
     - description: "People and Growth Management"
     - description: "Process and Documentation Management"
     - description: "Cross Functional Collaboration Management"
     - description: "Resource Management and Roadmap Planning"
-    - description: "Add feature to skip uploading glance image during a Openstack packer build (upstream)"
-    - description: "Participate in the re-audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
+    - description: "Adding a feature to skip uploading a Glance image during an Openstack packer build (upstream)"
+    - description: "Participation in the re-audit of the German Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
   tools:
     - Jira
     - Confluence
@@ -23,16 +23,16 @@
 - company: "Data4Life (formerly Gesundheitscloud)"
   position: "Senior Site Reliability Engineer"
   duration: "Jan, 2020 &ndash; Oct, 2020"
-  summary: "The Openstack migration finished and now it was time to focus on reliability, automation, monitoring and logging. Focus on improvements for daily operations and recovery."
+  summary: "The Openstack migration was complete and now it was time to focus on reliability, automation, monitoring, and logging. Focus on improvements for daily operations and recovery."
   projects:
     - description: "Setup lets encrypt cert manager with ansible"
-    - description: "Migration to the ansible k8s module instead of the kubectl command"
-    - description: "Improve cloud-init datasource openstack configuration to be more resilient"
-    - description: "Improve Grafana dashboards for better visibility."
-    - description: "Design and implementation of Living Documentation of Openstack resources within Atlassian confluence by leverage CI/CD"
-    - description: "Design and implementation to maintain PostgreSQL clusters and user accounts with ansible"
-    - description: "Design and implementation to share Openstack glance images across different Openstack installations"
-    - description: "Participate in the re-audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
+    - description: "Switch to the ansible k8s module instead of the kubectl command"
+    - description: "Improving the openstack configuration of cloud-init datasource for more resilience"
+    - description: "Improvement of Grafana dashboards for better visibility"
+    - description: "Design and implementation of Living Documentation of Openstack resources within Atlassian Confluence using CI/CD"
+    - description: "Design and implementation to manage PostgreSQL clusters and user accounts using Ansible"
+    - description: "Design and implementation of sharing Openstack images across different Openstack installations"
+    - description: "Participation in the re-audit of the German Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
   languages:
     - Golang
     - Bash 4
@@ -54,13 +54,13 @@
 - company: "Gesundheitscloud"
   position: "Site Reliability Engineer"
   duration: "Jan, 2018 &ndash; Dec, 2019"
-  summary: "Soon after my first months it became clear too us that i like to maintain also complex systems like a kubernetes or database cluster. So i switched from a DevOPS Engineer to a Site Reliability Engineer role. The company got attention and the product grow from a Proof of Concept to a first prototype. Regarding the compliance and security needs the company decided to move from Public Cloud offering to a Private Cloud setup. We evaluated the following two offerings Azure Stack from Microsoft and Openstack. First we migrated from Azure to Azure Stack and after almost a year we migrated finally to Openstack."
+  summary: "Soon after my first few months, we realised that I liked to maintain complex systems like a Kubernetes or database cluster. So I moved from the role of a DevOPS engineer to that of a site reliability engineer. The company caught my attention and the product evolved from a proof of concept to an initial prototype. Given the compliance and security requirements, the company decided to move from a public cloud offering to a private cloud deployment. We evaluated the following two offerings: Microsoft's Azure Stack and Openstack. Initially, we migrated from Azure to Azure Stack and finally, after almost a year, to Openstack."
   projects:
     - description: "Migration from Azure Stack to Openstack"
     - description: "Migration from Azure Cloud to Azure Stack"
-    - description: "Design and implementation of an kubernetes API Gateway"
-    - description: "Datadog agent integration and maintenance"
-    - description: "Participate in the audit of the German Federal Office for Information Security (BSI) to achieve ISO 27001 compliant certification"
+    - description: "Design and implementation of a Kubernetes API Gateway"
+    - description: "Integration and maintenance of the Datadog agent"
+    - description: "Participation in the audit of the Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
   languages:
     - golang
     - Bash 4
@@ -82,10 +82,10 @@
 - company: "Hasso-Plattner-Institute"
   position: "Senior DevOps Engineer"
   duration: "Sep, 2017 &ndash; Dec, 2017"
-  summary: "My first responsibility was it to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI were used as a hosted Continuous Integration service."
+  summary: "My first task was to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI was used as a hosted Continuous Integration service."
   projects:
-    - description: "Implementation of deployment pipeline for kubernetes microservices with Travis CI"
-    - description: "Design and implementation of central CI/CD pipelines"
+    - description: "Implementing the Deployment Pipeline for Kubernetes Microservices with Travis CI"
+    - description: "Design and implementation of core CI/CD pipelines"
   languages:
     - Bash 4
   tools:
@@ -99,12 +99,12 @@
 - company: "QualityPark"
   position: "Senior Java Software Engineer"
   duration: "Apr, 2015 &ndash; Aug, 2017"
-  summary: "The company QualityPark develop, maintain and customize the Micro Focus Dimensions RM (Requirement Management) solution for enterprise customers. Part of my work was to integrate new features and improvement into the core of the Dimensions RM solution. I was responsible for the Design, Implementation, Testing and Integration of the Java based components into the core of the Dimensions RM solution. I was the Backend developer in the Java team together with a frontend developer that did the web application related implementations as (CSS, HTML, JavaScript). I also gave product presentation at the customer facilities together with technical support and feedback."
+  summary: "The QualityPark company develops, maintains, and customizes the Micro Focus Dimensions RM ( Requirement Management ) solution for enterprise customers. Part of my job was to integrate new features and enhancements into the core Dimensions RM solution. I was responsible for designing, implementing, testing, and integrating Java based components into the core of the Dimensions RM solution. I was the back-end developer on the Java team, along with a front-end developer who did the implementations for the web applications (CSS, HTML, JavaScript). I also did product presentations to clients and provided technical support and feedback."
   projects:
-    - description: "On Sight Customer Presentation and Support"
-    - description: "Design, implementation and testing of Java components according to CI/CD principals"
-    - description: "Reverse engineering of core components like database access and web service API's with Java"
-    - description: "Maintenance and bug fixing of a 20 years+ Dimensions RM solution (C/C++)"
+    - description: "Customer presentation and on-site support"
+    - description: "Design, implementation and testing of Java components according to CI/CD principles"
+    - description: "Reverse engineering of core components such as database access and web service APIs from C/C++ to Java"
+    - description: "Maintenance and troubleshooting of a 20+ year old Dimensions RM solution (C/C++)"
   languages:
     - Java
     - JavaScript
@@ -128,12 +128,12 @@
 - company: "ZAG Zeitarbeits-Gesellschaft GmbH"
   position: "Unskilled Laborer"
   duration: "Sep, 2014 &ndash; Feb, 2015"
-  summary: I literally took time off from working as an Developer and decided to work as an unskilled laborer. This short change of profession also helped me with my personal growth. It enhanced my perspective towards physical hard work and also helped my to loss some weight as well.
+  summary: "I literally took time off from my job as a developer and decided to work as an unskilled laborer. This brief career change also helped me with my personal development. It improved my attitude towards hard physical work and also helped me lose some weight."
   projects:
-    - description: "2 month working in a computer retail storage house"
-    - description: "1 week working as a waitress on the InnoTrans 2014 exhibition"
-    - description: "1 week as a mover for office spaces"
-    - description: "1 month work in a shoe's storehouse"
+    - description: "2 months working in a computer retail warehouse"
+    - description: "1 week working as a waitress at the InnoTrans 2014 trade fair."
+    - description: "1 week work as a furniture packer for offices"
+    - description: "1 month work in a warehouse for shoes"
 
 # Senior Software Developer
 - company: "Self-employed"
@@ -166,10 +166,9 @@
 - company: "Deutsche Post AG"
   position: "Senior Java Software Developer"
   duration: "Mar, 2013 &ndash; Aug, 2013"
-  summary: "I was working in the partner B2C API team. We were responsible to design and develop an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology.
-  The release process was done together with the Operations department. The team was responsible to provide a working puppet configuration and the rollout was done by the Operations department."
+  summary: "I worked on the Partner B2C API team. We were responsible for designing and developing an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology. The release process was done together with the Operations department. The team was responsible for deploying a working Puppet configuration and the rollout was performed by the Operations department."
   projects:
-    - description: "Design and implementation of the Rest API Services for B2C"
+    - description: "Design and implementation of the Rest API services for B2C partners"
   languages:
     - Java
     - Groovy
@@ -186,11 +185,11 @@
 - company: "AdClear GmbH"
   position: "Senior Java Software Developer"
   duration: "Mar, 2011 &ndash; Oct, 2012"
-  summary: "The company AdClear GmbH was founded in March of 2011 in the same month I was hired as an Senior Java Software Developer to lead the Web Application development from the beginning. The company size at this time were around 8 full employees. Most of them i already knew from my time at the zanox AG. My responsibility was the Design of Web Application together with the related Backend Part. Later in the same year an Frontend Developer was hired. He was a fresh graduated student that I on boarded and mentor him."
+  summary: "The company AdClear GmbH was founded in March 2011. In the same month, I was hired as a Senior Java Software Developer to lead the web application development from the beginning. The company had about 8 permanent employees at that time. I already knew most of them from my time at the zanox AG. My job was to design the web application along with the related backend services. Later that year, a frontend developer was hired. He was a fresh student who I brought on board as a mentor."
   projects:
-    - description: "Design and implementation of Map Reduce (based on MongoDB) analyze and reporting services"
-    - description: "Design and implementation of data access Web Services"
-    - description: "Design and implementation of web application to analyze e-commerce Customer Journeys"
+    - description: "Design and implementation of Map Reduce (based on MongoDB), analytics and reporting services."
+    - description: "Design and implementation of web services for data access."
+    - description: "Design and implementation of a web application for the analysis of e-commerce customer journeys"
   languages:
     - Java
     - JavaScript
@@ -209,14 +208,14 @@
 - company: "AWIN AG (formally zanox AG)"
   position: "Senior Java Software Developer"
   duration: "Aug, 2006  &ndash; Feb, 2011"
-  summary: "Hired as working student for the development of an web application with Microsoft C++ based on the cgi interface of IIS 6. Finished the exam and was hired as a Java Software Developer. 2006 &dash; 2010 migration of the core services from a legacy system developed in C/C++ towards the Java Platform Enterprise Edition. 2010 &dash; 2011 Technical Lead of the public WebService team to build a high scalable public REST/SOAP API."
+  summary: "Hired as a working student to develop a web application using Microsoft C++ based on the cgi interface of IIS 6. Completed the exam and got hired as a Java Software Developer. 2006 - 2010 Migrated core services from a legacy system developed in C/C++ to Java Platform Enterprise Edition. 2010 - 2011 Technical lead of the Public WebServices team to build a highly scalable public REST /SOAP API."
   projects:
-    - description: "Development and maintenance of an public API"
+    - description: "Development and maintenance of a public API"
     - description: "Research and development of zanox connect (authentication and authorization)"
     - description: "B2B and B2C integration with Web Services (Soap and Rest)"
-    - description: "Design and implementation of the core services with SOA (Service Oriented Architecture)"
-    - description: "Migration to the Java Platform, Enterprise Edition"
-    - description: "Reverse engineering of the Legacy System (C++ PRM)"
+    - description: "Design and implementation of core services with SOA (Service Oriented Architecture)"
+    - description: "Migration to the Java platform, Enterprise Edition"
+    - description: "Reverse Engineering of the legacy system (C++ PRM)"
   languages:
     - Java
     - C++
@@ -239,7 +238,7 @@
 - company: "Total"
   position: "Internship"
   duration: "Nov, 2003  &ndash; Feb, 2004"
-  summary: "During my studies of applied computer science at the HTW (former FHTW) Berlin i did an internship at the company Total. The project of this internship was the development of an E-commerce like Web Application for internal usage."
+  summary: "During my studies of Applied Computer Science at the HTW (former FHTW) Berlin I did an internship at the company Total. The project of this internship was the development of an e-commerce like web application for internal use."
   projects:
     - description: "Automation of internal web statistics report generation"
     - description: "Development of an internal E-commerce like shop for oil related products"
