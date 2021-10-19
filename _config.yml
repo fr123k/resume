@@ -67,6 +67,7 @@ resume_social_links:
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://www.linkedin.com/in/frank-ittermann"
   # resume_instagram_url:         "insert your Instagram URL here"
+  resume_goodreads_url:           "https://www.goodreads.com/user/show/117403451-frank"
   resume_website_url:           "https://profile.fr123k.uk"
   #resume_medium_url:            ""
 resume_print_social_links:      true

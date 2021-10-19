@@ -39,6 +39,11 @@
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_instagram_url }}" class="icon-link" itemprop="sameAs" target="_blank">{% include icons/icon-instagram.html %}</a></li>
   {% endif %}
 
+  <!-- Goodreads link -->
+  {% if site.resume_social_links.resume_goodreads_url %}
+  <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_goodreads_url }}" class="icon-link" itemprop="url" target="_blank">{% include icons/icon-goodreads.html %}</a></li>
+  {% endif %}
+
   <!-- Website link -->
   {% if site.resume_social_links.resume_website_url %}
   <li class="icon-link-item"><a href="{{ site.resume_social_links.resume_website_url }}" class="icon-link" itemprop="url" target="_blank">{% include icons/icon-website.html %}</a></li>
