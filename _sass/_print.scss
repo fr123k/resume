@@ -4,13 +4,13 @@
   .no-print { display: none !important }
   .print-only { display: block !important }
   .content, .page {
-    width: 100%; 
+    width: 100%;
     margin: 0; 
     float: none;
   }
 
   /** Seitenränder einstellen */
-  @page { margin: 2cm }
+  @page { margin: 0cm; }
   
   /* Font auf 16px/13pt setzen, Background auf Weiß und Schrift auf Schwarz setzen.*/
   /* Das spart Tinte */
@@ -19,6 +19,7 @@
     line-height: 1.3;
     background: #fff !important;
     color: #000;
+    margin: 2cm; 
   }
 
   h1 {
