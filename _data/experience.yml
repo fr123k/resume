@@ -6,21 +6,20 @@
   duration: "Feb, 2022 &ndash; Feb 2023"
   summary: ""
   projects:
-    - description: "Management of Cloud Infrastructure with Terraform"
+    - description: "Management of AWS Cloud Infrastructure with Terraform"
     - description: "Planning and Execution of Maintenance Operations affecting production environments"
     - description: "Design and Implementation of Terraform CI/CD with CircleCI"
-    - description: "Containerization of CI/CD Pipelines in CircleCI"
+    - description: "Containerization of CI/CD Pipelines"
     - description: "Integration of Datadog for Alerting and Monitoring"
-    - description: "Migration of AWS Workloads to Azure (not finished)"
+    - description: "Migration of AWS Workloads to Azure"
   languages:
+    - Bash
     - Golang
-    - Bash 4
-    - Python
+    - Yaml
   tools:
     - Ansible
     - CicleCI
     - Hashicorp Terraform
-    - Jenkins
   infrastructure:
     - Azure
     - AWS
