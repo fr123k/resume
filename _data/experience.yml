@@ -15,6 +15,7 @@
   languages:
     - Bash
     - Golang
+    - Python
     - Yaml
   tools:
     - Ansible
@@ -43,7 +44,6 @@
     - Jira
     - Confluence
     - Slack
-    - Github
 
 # Senior Site Reliability Engineer
 - company: "Data4Life (formerly Gesundheitscloud)"
@@ -91,7 +91,7 @@
   languages:
     - golang
     - Bash 4
-    - python
+    - Python
     - Java
   tools:
     - Hashicorp Vagrant
@@ -142,7 +142,6 @@
   frameworks:
     - Apache Jersey
     - AngularJS 1
-    - JDBC
     - JUnit
   tools:
     - Jenkins
@@ -184,7 +183,6 @@
     - Apache Wicket
     - NodeJS
   tools:
-    - Scala sbt
     - Travis CI
     - NodeJS
   infrastructure:
@@ -205,7 +203,6 @@
   tools:
     - Gradle
     - Teamcity
-    - Puppet
   infrastructure:
     - Jetty
 
@@ -252,7 +249,6 @@
     - Apache CXF
     - Apache Lucene
   tools:
-    - Apache Ant
     - Apache Maven
     - Jenkins
   infrastructure:
