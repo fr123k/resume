@@ -299,7 +299,7 @@
             <h2 id="technicalSkills">Technical Experience</h2>
           </header>
           <div class="grid">
-            <div class="col-1-2">
+            <div class="col-1-2 unbreakable">
               {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
               <h4 class="resume-item-subtitle">Programming Languages</h4>
               <ul class="resume-item-list">
@@ -308,7 +308,7 @@
                 {% endfor %}
               </ul>
             </div>
-            <div class="col-1-2">
+            <div class="col-1-2 unbreakable">
               {% assign all_tools = site.data.experience | map: "tools" | compact | uniq | sort %}
               <h4 class="resume-item-subtitle">Tools</h4>
               <ul class="resume-item-list">
@@ -319,7 +319,7 @@
             </div>
           </div>
           <div class="grid">
-            <div class="col-1-2">
+            <div class="col-1-2 unbreakable">
               {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
               <h4 class="resume-item-subtitle">Infrastructure</h4>
               <ul class="resume-item-list">
@@ -328,7 +328,7 @@
                 {% endfor %}
               </ul>
             </div>
-            <div class="col-1-2">
+            <div class="col-1-2 unbreakable">
               {% assign all_frameworks = site.data.experience | map: "frameworks" | compact | uniq | sort %}
               <h4 class="resume-item-subtitle">Frameworks</h4>
               <ul class="resume-item-list">
