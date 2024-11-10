@@ -1,5 +1,32 @@
 # Jobs
 
+# Senior Platform Engineer
+- company: "Flink SE"
+  position: "Senior Platform Engineer"
+  duration: "Mar, 2023 &ndash; present"
+  summary: "Overseeing and optimizing the production infrastructure for the company's cloud-native, event-driven platform on Google Kubernetes Engine (GKE) and Google Cloud Platform (GCP)."
+  projects:
+    - description: "Infrastructure as Code: Managed using Terraform and GCP Config Connector"
+    - description: "GKE Upgrades: Completed a full GKE cluster upgrade from version 1.26 to 1.29 within a 3-month period"
+    - description: "CI/CD Pipelines: Designed and maintained robust pipelines with GitHub Actions"
+    - description: "Automated Dependency Management: Integrated Dependabot and DuneBot for seamless dependency updates"
+    - description: "GitHub Automation: Developed DuneBot as a GitHub App to automate pull request approvals and merges"
+    - description: "Self-Service Platform: Empowered developers with Argo CD and Temporal for independent application creation and deployment"
+  languages:
+    - Golang
+    - Yaml
+    - Helm
+  tools:
+    - Argo CD
+    - GCP Config Connector
+    - Github Actions
+    - Hashicorp Terraform
+    - Sonarqube
+    - Temporal
+  infrastructure:
+    - Google Cloud Platform
+    - Kubernetes
+
 # Senior Site Reliability Engineering
 - company: "Planetly GmbH"
   position: "Senior Site Reliability Engineer"
@@ -19,7 +46,7 @@
     - Yaml
   tools:
     - Ansible
-    - CicleCI
+    - CircleCI
     - Hashicorp Terraform
   infrastructure:
     - Azure
@@ -89,7 +116,7 @@
     - description: "Integration and maintenance of the Datadog agent"
     - description: "Participation in the audit of the Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
   languages:
-    - golang
+    - Golang
     - Bash 4
     - Python
     - Java

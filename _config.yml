@@ -1,9 +1,9 @@
 # Site settings
-title: "SRE Application Resume"
-description: "The Site Reliability Engineer job resume of Frank Ittermann."
+title: "Software Enginneer Resume"
+description: "The Software Engineer job resume of Frank Ittermann."
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars.githubusercontent.com/u/56318800
+avatar: https://avatars.githubusercontent.com/u/126682769?v=4
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -26,7 +26,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Frank Ittermann"
-resume_title:                   "Team Lead / Senior Site Reliability Engineer / Senior Backend Engineer"
+resume_title:                   "Senior Platform Engineer / Senior Site Reliability Engineer / Senior Backend Engineer"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "frank.ittermann@yahoo.com"
@@ -38,7 +38,7 @@ resume_contact_address:         ""
 resume_header_contact_info:     "15+ years of software and system engineering experience."
 display_header_contact_info:    "true"
 
-resume_header_intro: "<p>Everything seems to be impossible until it is done.</p>"
+resume_header_intro: "<p>Everything seems to be impossible until it is accomplished.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -61,15 +61,17 @@ resume_section_interests:       true
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_github_url:            "https://github.com/fr123k"
+  resume_github_url:            "https://github.com/fr12k"
+  resume_github_url2:           "https://github.com/fr123k"
+
   # resume_twitter_url:           ""
   # resume_dribbble_url:          ""
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://www.linkedin.com/in/frank-ittermann"
   # resume_instagram_url:         "insert your Instagram URL here"
-  resume_goodreads_url:           "https://www.goodreads.com/user/show/117403451-frank"
+  resume_goodreads_url:          "https://www.goodreads.com/user/show/117403451-frank"
   resume_website_url:           "https://profile.fr123k.uk"
-  #resume_medium_url:            ""
+  #resume_medium_url:             ""
 resume_print_social_links:      true
 
 # Design settings
