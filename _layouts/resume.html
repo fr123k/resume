@@ -60,19 +60,21 @@
           {% for job in site.data.experience %}
           <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
             <div class="unbreakable">
-              <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-              <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-              <p class="resume-item-copy">{{ job.summary }}</p>
+              <div class="unbreakable">
+                <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
+                <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+                <p class="resume-item-copy">{{ job.summary }}</p>
+              </div>
+              {% if job.projects %}
+              <ul class="resume-item-list unbreakable">
+                {% for project in job.projects %}
+                <li>{{ project.description }}</li>
+                {% endfor %}
+              </ul>
             </div>
-            {% if job.projects %}
-            <ul class="resume-item-list unbreakable">
-              {% for project in job.projects %}
-              <li>{{ project.description }}</li>
-              {% endfor %}
-            </ul>
             {% endif %}
             <div class="grid">
-              <div class="col-1-2">
+              <div class="col-1-2 unbreakable">
                 {% if job.languages %}
                 <h4 class="resume-item-subtitle">Programming Languages</h4>
                 <ul class="resume-print-item-list">
@@ -82,7 +84,7 @@
                 </ul>
                 {% endif %}
               </div>
-              <div class="col-1-2">
+              <div class="col-1-2 unbreakable">
                 {% if job.tools %}
                 <h4 class="resume-item-subtitle">Tools</h4>
                 <ul class="resume-print-item-list">
@@ -94,7 +96,7 @@
               </div>
             </div>
             <div class="grid">
-              <div class="col-1-2">
+              <div class="col-1-2 unbreakable">
                 {% if job.infrastructure %}
                 <h4 class="resume-item-subtitle">Infrastructure</h4>
                 <ul class="resume-print-item-list">
@@ -104,7 +106,7 @@
                 </ul>
                 {% endif %}
               </div>
-              <div class="col-1-2">
+              <div class="col-1-2 unbreakable">
                 {% if job.frameworks %}
                 <h4 class="resume-item-subtitle">Frameworks</h4>
                 <ul class="resume-print-item-list">
@@ -170,7 +172,7 @@
 
         {% if site.resume_section_skills %}
         <!-- begin Skills -->
-        <section class="content-section">
+        <section class="content-section unbreakable">
 
           <header class="section-header">
             <h2 id="skills">Skills</h2>
