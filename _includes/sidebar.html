@@ -1,46 +1,117 @@
 <div class="sidebar no-print">
-    {% if site.resume_section_skills %}
-    <header class="">
-        <img src="/images/logo_fr123k_transparent.png" alt="logo" class="logo" itemprop="image"/>
-    </header>
-    <!-- begin Skills -->
-    <section class="content-section">
-        <h2>Technical Experience</h2>
-        {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
-        <h4 class="resume-item-subtitle">Programming Languages</h4>
 
-        <ul class="resume-item-list">
-        {% for language in all_languages %}
-            {% if language %}
-            <li>{{ language }}</li>
-            {% endif %}
-        {% endfor %}
-        </ul>
-        {% assign all_tools = site.data.experience | map: "tools" | compact | uniq | sort %}
+    <!-- Profile -->
+    <div class="sidebar-profile">
+        {% if site.resume_avatar == 'true' %}
+        <img src="{{ site.avatar }}" alt="{{ site.resume_name }}" class="sidebar-avatar" />
+        {% endif %}
+        <h1 class="sidebar-name">{{ site.resume_name }}</h1>
+        <p class="sidebar-title">{{ site.resume_title }}</p>
+    </div>
 
-        <h4 class="resume-item-subtitle">Tools</h4>
-
-        <ul class="resume-item-list">
-        {% for tool in all_tools %}
-            {% if tool %}
-            <li>{{ tool }}</li>
-            {% endif %}
-        {% endfor %}
-        </ul>
-
-        {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
-        <h4 class="resume-item-subtitle">Infrastructure</h4>
-
-        <ul class="resume-item-list">
-        {% for server in all_infrastructure %}
-            {% if server %}
-            <li>{{ server }}</li>
-            {% endif %}
-        {% endfor %}
-        </ul>
-
-    </section>
-    <!-- end Skills -->
+    <!-- Social Links -->
+    {% if site.resume_social_links %}
+    <ul class="sidebar-social">
+        {% if site.resume_social_links.resume_github_url %}
+        <li><a href="{{ site.resume_social_links.resume_github_url }}" target="_blank" title="GitHub">{% include icons/icon-github.html %}</a></li>
+        {% endif %}
+        {% if site.resume_social_links.resume_github_url2 %}
+        <li><a href="{{ site.resume_social_links.resume_github_url2 }}" target="_blank" title="GitHub">{% include icons/icon-github.html %}</a></li>
+        {% endif %}
+        {% if site.resume_social_links.resume_linkedin_url %}
+        <li><a href="{{ site.resume_social_links.resume_linkedin_url }}" target="_blank" title="LinkedIn">{% include icons/icon-linkedin.html %}</a></li>
+        {% endif %}
+        {% if site.resume_social_links.resume_goodreads_url %}
+        <li><a href="{{ site.resume_social_links.resume_goodreads_url }}" target="_blank" title="Goodreads">{% include icons/icon-goodreads.html %}</a></li>
+        {% endif %}
+        {% if site.resume_social_links.resume_website_url %}
+        <li><a href="{{ site.resume_social_links.resume_website_url }}" target="_blank" title="Website">{% include icons/icon-website.html %}</a></li>
+        {% endif %}
+    </ul>
     {% endif %}
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+
+    <!-- Contact -->
+    <div class="sidebar-contact">
+        {% if site.resume_contact_email %}
+        <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:{{ site.resume_contact_email }}">{{ site.resume_contact_email }}</a>
+        </div>
+        {% endif %}
+        {% if site.resume_social_links.resume_website_url %}
+        <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="{{ site.resume_social_links.resume_website_url }}" target="_blank">{{ site.resume_social_links.resume_website_url | replace: 'https://', '' }}</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Technical Skills -->
+    {% if site.resume_section_experience %}
+    <div class="sidebar-section">
+        <h3 class="sidebar-section-title">Languages</h3>
+        {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
+        <ul class="sidebar-tags">
+            {% for language in all_languages %}
+                {% if language %}
+                <li>{{ language }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <h3 class="sidebar-section-title">Tools</h3>
+        {% assign all_tools = site.data.experience | map: "tools" | compact | uniq | sort %}
+        <ul class="sidebar-tags">
+            {% for tool in all_tools %}
+                {% if tool %}
+                <li>{{ tool }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <h3 class="sidebar-section-title">Infrastructure</h3>
+        {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
+        <ul class="sidebar-tags">
+            {% for server in all_infrastructure %}
+                {% if server %}
+                <li>{{ server }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <!-- Education -->
+    {% if site.resume_section_education %}
+    <div class="sidebar-section">
+        <h3 class="sidebar-section-title">Education</h3>
+        {% for education in site.data.education %}
+        <div class="sidebar-education">
+            <p class="edu-degree">{{ education.degree }}</p>
+            <p class="edu-school">{{ education.uni }}</p>
+            <p class="edu-year">{{ education.year }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Interests -->
+    {% if site.resume_section_interests %}
+    <div class="sidebar-section">
+        <h3 class="sidebar-section-title">Interests</h3>
+        <ul class="sidebar-interests">
+            {% for interest in site.data.interests %}
+            <li>{{ interest.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <div class="sidebar-footer">
+        &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </div>
 </div>

@@ -1,254 +1,487 @@
 /*
- *  __                  __
- * /\ \                /\ \
- * \ \ \___   __  __   \_\ \     __
- *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
- *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
- *    \ \_\ \_\/`____ \ \___,_\ \____\
- *     \/_/\/_/`/___/> \/__,_ /\/____/
- *                /\___/
- *                \/__/
- *
- * Designed, built, and released under MIT license by @mdo. Learn more at
- * https://github.com/poole/hyde.
+ * Layout C: Single Page Narrative
+ * Full-width hero + story blocks + dark bottom sections
  */
 
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: $hero-min-height;
+  background: $sidebar-bg;
+  color: $sidebar-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 3rem 1.5rem;
+}
 
-/*
- * Contents
- *
- * Global resets
- * Sidebar
- * Container
- * Reverse layout
- * Themes
- */
+.hero-content {
+  max-width: 700px;
+}
 
+.hero-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid $accent;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
 
-/*
- * Global resets
- *
- * Update the foundational and global aspects of the page.
- */
+.hero-name {
+  font-family: $font-heading;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: $sidebar-heading;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
 
- html {
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+.hero-title {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: $sidebar-text;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.hero-quote {
+  margin-bottom: 1rem;
+
+  p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    line-height: 1.6;
   }
-  @media (min-width: 48em) {
-    html {
-      font-size: 16px;
-    }
+}
+
+.hero-experience {
+  font-size: 0.95rem;
+  color: $accent;
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+}
+
+.hero-social {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  li {
+    display: inline-block;
   }
-  @media (min-width: 58em) {
-    html {
-      font-size: 20px;
-    }
+
+  .icon {
+    height: 24px;
+    width: 24px;
+    fill: $sidebar-text;
+    @include transition(fill .2s ease);
   }
-  
-  
-  /*
-   * Sidebar
-   *
-   * Flexible banner for housing site name, intro, and "footer" content. Starts
-   * out above content in mobile and later moves to the side with wider viewports.
-   */
-  
-  .sidebar {
-    text-align: center;
-    color: rgba(255,255,255,.5);
-    background-color: #202020;
-    overflow: scroll;
-    .content-section {
-      padding: 0rem 1rem;
-    }
+
+  .icon path,
+  .icon circle {
+    fill: $sidebar-text;
+    @include transition(fill .2s ease);
   }
-  @media (min-width: 48em) {
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 18rem;
-      text-align: left;
-      overflow: scroll;
-    }
+
+  a:hover .icon,
+  a:hover .icon path,
+  a:hover .icon circle {
+    fill: $accent;
   }
-  
-  /* Sidebar links */
-  .sidebar a {
+}
+
+.hero .contact-button {
+  @include border-radius(6px);
+  background-color: $accent;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-family: $font-sans;
+  font-weight: 500;
+  color: #fff;
+  @include transition(all .2s ease);
+  border: none;
+
+  &:hover {
+    background-color: $accent-hover;
     color: #fff;
   }
-  
-  /* About section */
-  .sidebar-about h1 {
-    color: #fff;
-    margin-top: 0;
-    font-family: "Abril Fatface", serif;
-    font-size: 3.25rem;
-  }
-  
-  /* Sidebar nav */
-  .sidebar-nav {
-    margin-bottom: 1rem;
-  }
-  .sidebar-nav-item {
-    display: block;
-    line-height: 1.75;
-  }
-  a.sidebar-nav-item:hover,
-  a.sidebar-nav-item:focus {
-    text-decoration: underline;
-  }
-  .sidebar-nav-item.active {
-    font-weight: bold;
-  }
-  
-  /* Sticky sidebar
-   *
-   * Add the `sidebar-sticky` class to the sidebar's container to affix it the
-   * contents to the bottom of the sidebar in tablets and up.
-   */
-  
-  @media (min-width: 48em) {
-    .sidebar-sticky {
-      position: absolute;
-      right:  1rem;
-      bottom: 1rem;
-      left:   1rem;
-    }
-  }
-  
-  
-  // /* Container
-  //  *
-  //  * Align the contents of the site above the proper threshold with some margin-fu
-  //  * with a 25%-wide `.sidebar`.
-  //  */
+}
 
-  // .content {
-  //   padding-top:    4rem;
-  //   padding-bottom: 4rem;
-  // }
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.3);
+  animation: bounce 2s infinite;
+}
 
-  // @media (min-width: 48em) {
-  //   .content {
-  //     max-width: 38rem;
-  //     margin-left: 20rem;
-  //     margin-right: 2rem;
-  //   }
-  // }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-8px); }
+  60% { transform: translateX(-50%) translateY(-4px); }
+}
 
-  // @media (min-width: 64em) {
-  //   .content {
-  //     margin-left: 22rem;
-  //     margin-right: 4rem;
-  //   }
-  // }
-  
-  
-  /*
-   * Reverse layout
-   *
-   * Flip the orientation of the page by placing the `.sidebar` on the right.
-   */
-  
-  @media (min-width: 48em) {
-    .layout-reverse .sidebar {
-      left: auto;
-      right: 0;
+/* ===== SECTION NAV ===== */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid $border;
+}
+
+.section-nav-inner {
+  max-width: $story-max-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 0 1rem;
+
+  a {
+    display: inline-block;
+    padding: 0.85rem 1.5rem;
+    font-family: $font-heading;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $muted;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    @include transition(all .2s ease);
+
+    &:hover {
+      color: $accent;
+      border-bottom-color: $accent;
     }
-    .layout-reverse .content {
-      margin-left: 2rem;
-      margin-right: 20rem;
+  }
+}
+
+/* ===== CONTENT WRAPPER ===== */
+.content-wrapper {
+  width: 100%;
+}
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience-section {
+  padding: 0;
+}
+
+.experience-heading {
+  font-family: $font-heading;
+  font-size: 2rem;
+  font-weight: 800;
+  color: $heading-color;
+  text-align: center;
+  margin: 0;
+  padding: 3rem 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+/* Story blocks - alternating backgrounds */
+.story-block {
+  padding: 2.5rem 1.5rem;
+
+  &.story-odd {
+    background: $white;
+  }
+
+  &.story-even {
+    background: $bg;
+  }
+}
+
+.story-content {
+  max-width: $story-max-width;
+  margin: 0 auto;
+}
+
+.story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.story-company {
+  font-family: $font-heading;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: $heading-color;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.story-duration {
+  font-size: 0.9rem;
+  color: $muted;
+  white-space: nowrap;
+}
+
+.story-position {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $accent;
+  margin: 0 0 0.75rem;
+}
+
+.story-summary {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: $text-color;
+  margin: 0 0 0.75rem;
+}
+
+.story-projects {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+
+  li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: $text-color;
+    list-style-type: disc;
+    margin-bottom: 0.15rem;
+
+    &::marker {
+      color: $accent;
+    }
+
+    a {
+      color: $accent;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom-color: $accent;
+      }
     }
   }
-  
-  @media (min-width: 64em) {
-    .layout-reverse .content {
-      margin-left: 4rem;
-      margin-right: 22rem;
+}
+
+/* Tech band */
+.tech-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  margin-top: 0.75rem;
+  border-top: 1px solid $border;
+}
+
+.tech-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  li {
+    @include tag-pill;
+  }
+}
+
+.tech-tags-languages li { background: $tag-lang-bg; color: $tag-lang-color; }
+.tech-tags-tools li { background: $tag-tool-bg; color: $tag-tool-color; }
+.tech-tags-infrastructure li { background: $tag-infra-bg; color: $tag-infra-color; }
+.tech-tags-frameworks li { background: $tag-framework-bg; color: $tag-framework-color; }
+
+/* ===== BOTTOM SECTIONS ===== */
+.bottom-sections {
+  background: $sidebar-bg;
+  color: $sidebar-text;
+  padding: 3.5rem 1.5rem;
+}
+
+.bottom-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.bottom-heading {
+  font-family: $font-heading;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $sidebar-divider;
+}
+
+.bottom-item {
+  margin-bottom: 1rem;
+}
+
+.bottom-item-title {
+  font-family: $font-heading;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $sidebar-heading;
+  margin: 0 0 0.25rem;
+}
+
+.bottom-item-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: $sidebar-text;
+  margin: 0 0 0.4rem;
+}
+
+.bottom-intro {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.bottom-rule-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0.3rem 0 0.15rem;
+}
+
+.bottom-item-meta {
+  font-size: 0.8rem;
+  color: $muted;
+  margin: 0;
+}
+
+.bottom-interests {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  li {
+    @include tag-pill;
+    background: rgba(255, 255, 255, 0.08);
+    color: $sidebar-text;
+    font-size: 0.75rem;
+    padding: 2px 10px;
+  }
+}
+
+/* ===== FOOTER ===== */
+.page-footer {
+  background: darken($sidebar-bg, 3%);
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding: 1.5rem;
+
+  .footer-line {
+    font-size: 0.8rem;
+    margin: 0;
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+
+      &:hover {
+        color: $accent;
+      }
     }
   }
-  
-  
-  
-  /*
-   * Themes
-   *
-   * As of v1.1, Hyde includes optional themes to color the sidebar and links
-   * within blog posts. To use, add the class of your choosing to the `body`.
-   */
-  
-  /* Base16 (http://chriskempson.github.io/base16/#default) */
-  
-  /* Red */
-  .theme-base-08 .sidebar {
-    background-color: #ac4142;
+
+  .icon {
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
   }
-  .theme-base-08 .content a,
-  .theme-base-08 .related-posts li a:hover {
-    color: #ac4142;
+
+  .icon path,
+  .icon circle {
+    fill: rgba(255, 255, 255, 0.5);
   }
-  
-  /* Orange */
-  .theme-base-09 .sidebar {
-    background-color: #d28445;
+
+  a:hover .icon path,
+  a:hover .icon circle {
+    fill: $accent;
   }
-  .theme-base-09 .content a,
-  .theme-base-09 .related-posts li a:hover {
-    color: #d28445;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 47.99em) {
+  .hero {
+    min-height: 70vh;
+    padding: 2.5rem 1rem;
   }
-  
-  /* Yellow */
-  .theme-base-0a .sidebar {
-    background-color: #f4bf75;
+
+  .hero-name {
+    font-size: 2rem;
   }
-  .theme-base-0a .content a,
-  .theme-base-0a .related-posts li a:hover {
-    color: #f4bf75;
+
+  .hero-avatar {
+    width: 100px;
+    height: 100px;
   }
-  
-  /* Green */
-  .theme-base-0b .sidebar {
-    background-color: #90a959;
+
+  .hero-title {
+    font-size: 0.95rem;
   }
-  .theme-base-0b .content a,
-  .theme-base-0b .related-posts li a:hover {
-    color: #90a959;
+
+  .section-nav-inner {
+    gap: 0;
+
+    a {
+      padding: 0.75rem 0.8rem;
+      font-size: 0.75rem;
+    }
   }
-  
-  /* Cyan */
-  .theme-base-0c .sidebar {
-    background-color: #75b5aa;
+
+  .experience-heading {
+    font-size: 1.5rem;
+    padding: 2rem 1rem 0;
   }
-  .theme-base-0c .content a,
-  .theme-base-0c .related-posts li a:hover {
-    color: #75b5aa;
+
+  .story-block {
+    padding: 1.5rem 1rem;
   }
-  
-  /* Blue */
-  .theme-base-0d .sidebar {
-    background-color: #6a9fb5;
+
+  .story-header {
+    flex-direction: column;
+    gap: 0.15rem;
   }
-  .theme-base-0d .content a,
-  .theme-base-0d .related-posts li a:hover {
-    color: #6a9fb5;
+
+  .story-company {
+    font-size: 1.15rem;
   }
-  
-  /* Magenta */
-  .theme-base-0e .sidebar {
-    background-color: #aa759f;
+
+  .bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .theme-base-0e .content a,
-  .theme-base-0e .related-posts li a:hover {
-    color: #aa759f;
+
+  .bottom-sections {
+    padding: 2.5rem 1rem;
   }
-  
-  /* Brown */
-  .theme-base-0f .sidebar {
-    background-color: #8f5536;
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .bottom-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
-  .theme-base-0f .content a,
-  .theme-base-0f .related-posts li a:hover {
-    color: #8f5536;
-  }
+}
