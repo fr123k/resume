@@ -1,66 +1,49 @@
-# Resume template
+# Frank Ittermann — Resume
 
-*A simple Jekyll + GitHub Pages powered resume template.*
+*A Jekyll + GitHub Pages powered resume site for [Frank Ittermann](https://resume.fr123k.uk).*
 
-![img](images/screenshot.png)
+This is a heavily customized fork of [jglovier/resume-template](https://github.com/jglovier/resume-template). The original sidebar layout has been replaced with a custom single-column narrative design ("Hyde" theme) featuring a dark hero section, alternating story blocks, color-coded tech tags, and a sophisticated print/PDF stylesheet.
 
-## Docs
+## Running locally
 
-### Running locally
+### With Ruby + Bundler
 
-To test locally, run the following in your terminal:
+```bash
+bundle install
+bundle exec jekyll serve
+# Open http://localhost:4000
+```
 
-1. Clone repo locally
-1. `bundle install`
-2. `bundle exec jekyll serve`
-3. Open your browser to `localhost:4000`
+### With Docker (using jekyll/jekyll image)
 
-### Running locally with Docker
+```bash
+make local
+```
 
-To test locally with docker, run the following in your terminal after installing docker into your system:
+### With Docker (using project Dockerfile)
 
-1. `docker image build -t resume-template .`
-2. `docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template`
+```bash
+docker image build -t resume-template .
+docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template
+```
 
-### Customizing
+## Project Structure
 
-First you'll want to fork the repo to your own account. Then clone it locally and customize, or use the GitHub web editor to customize.
+| Path | Description |
+|------|-------------|
+| `_config.yml` | Site configuration (name, title, social links, section toggles) |
+| `_layouts/resume.html` | Main HTML layout |
+| `_includes/` | Partials: head, sidebar, analytics, SVG icons |
+| `_data/` | YAML content: experience, education, skills, principles, interests |
+| `_sass/` | SCSS partials — the custom "Hyde" theme |
+| `_sass/_hyde.scss` | Main stylesheet (hero, story blocks, tech bands, bottom sections) |
+| `_sass/_print.scss` | Print/PDF layout (A4, 11pt Calibri) |
+| `CNAME` | Custom domain: `resume.fr123k.uk` |
 
-#### Options/configuration
+## Customizing
 
-Most of the basic customization will take place in the `/_config.yml` file. Here is a list of customizations available via `/_config.yml`:
-
-[...write these out...]
-
-#### Editing content
-
-Most of the content configuration will take place in the `/_layouts/resume.html` file. Simply edit the markup there accordingly
-
-### Publishing to GitHub Pages for free
-
-[GitHub Pages](https://pages.github.com/) will host this for free with your GitHub account. Just make sure you're using a `gh-pages` branch, and the site will automatically be available at `yourusername.github.io/resume-template` (you can rename the repo to resume for your own use if you want it to be available at `yourusername.github.io/resume`). You can also add a CNAME if you want it to be available at a custom domain...
-
-### Configuring with your own domain name
-
-To setup your GH Pages site with a custom domain, [follow the instructions](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) on the GitHub Help site for that topic.
-
-### Themes
-
-Right now resume-template only has one theme. More are coming :soon: though. :heart:
-
-## Roadmap
-
-A feature roadmap is [available here](https://github.com/jglovier/resume-template/projects/1). If you features suggestions, please [open a new issue](https://github.com/jglovier/resume-template/issues/new).
-
-## Contributing
-
-If you spot a bug, or want to improve the code, or even make the dummy content better, you can do the following:
-
-1. [Open an issue](https://github.com/jglovier/resume-template/issues/new) describing the bug or feature idea
-2. Fork the project, make changes, and submit a pull request
+Edit `_config.yml` to change name, title, social links, and toggle sections on/off. Resume content lives in the `_data/` directory as structured YAML files.
 
 ## License
 
-The code and styles are licensed under the MIT license. [See project license.](LICENSE) Obviously you should not use the content of this demo repo in your own resume. :wink:
-
-Disclaimer: Use of Homer J. Simpson image and name used under [Fair Use](https://en.wikipedia.org/wiki/Fair_use) for educational purposes. Project license does not apply to use of this material.
+The code and styles are licensed under the MIT license. See [LICENSE](LICENSE).
