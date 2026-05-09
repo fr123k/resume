@@ -1,6 +1,15 @@
-# Build the project Docker image (Ruby 3.3 + Jekyll 4.4)
+# Build the project — prefer Docker, fall back to direct Jekyll build
 build:
-	docker build -t resume .
+	@if docker info >/dev/null 2>&1; then \
+		docker build -t resume .; \
+	elif command -v bundle >/dev/null 2>&1; then \
+		bundle exec jekyll build; \
+	else \
+		echo "Neither Docker nor bundler are available. Install the prerequisites:"; \
+		echo "  1. Docker: https://docs.docker.com/get-docker/"; \
+		echo "  2. Or run 'gem install bundler && bundle install && make serve'"; \
+		exit 1; \
+	fi
 
 # Run the site locally via the project Dockerfile
 local: stop

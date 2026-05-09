@@ -5,251 +5,176 @@
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
-    <!-- ===== HERO SECTION (web only) ===== -->
-    <section class="hero no-print">
-      <div class="hero-content">
-        {% if site.resume_avatar == 'true' %}
-        <img src="{{ site.avatar }}" alt="{{ site.resume_name }}" class="hero-avatar" itemprop="image"/>
-        {% endif %}
+    <!-- ===== TWO-COLUMN LAYOUT ===== -->
+    <div class="page-wrapper">
 
-        <h1 class="hero-name" itemprop="name">{{ site.resume_name }}</h1>
-        <p class="hero-title" itemprop="jobTitle">{{ site.resume_title }}</p>
+      <!-- ===== SIDEBAR (web only) ===== -->
+      {% include sidebar.html %}
 
-        {% if site.resume_header_intro %}
-        <div class="hero-quote">{{ site.resume_header_intro }}</div>
-        {% endif %}
+      <!-- ===== MAIN CONTENT ===== -->
+      <main class="main-content">
 
-        {% if site.display_header_contact_info == 'true' %}
-        <p class="hero-experience">{{ site.resume_header_contact_info }}</p>
-        {% endif %}
-
-        {% if site.resume_social_links %}
-        <ul class="hero-social">
-          {% if site.resume_social_links.resume_github_url %}
-          <li><a href="{{ site.resume_social_links.resume_github_url }}" target="_blank" title="GitHub">{% include icons/icon-github.html %}</a></li>
-          {% endif %}
-          {% if site.resume_social_links.resume_github_url2 %}
-          <li><a href="{{ site.resume_social_links.resume_github_url2 }}" target="_blank" title="GitHub">{% include icons/icon-github.html %}</a></li>
-          {% endif %}
-          {% if site.resume_social_links.resume_linkedin_url %}
-          <li><a href="{{ site.resume_social_links.resume_linkedin_url }}" target="_blank" title="LinkedIn">{% include icons/icon-linkedin.html %}</a></li>
-          {% endif %}
-          {% if site.resume_social_links.resume_goodreads_url %}
-          <li><a href="{{ site.resume_social_links.resume_goodreads_url }}" target="_blank" title="Goodreads">{% include icons/icon-goodreads.html %}</a></li>
-          {% endif %}
-          {% if site.resume_social_links.resume_website_url %}
-          <li><a href="{{ site.resume_social_links.resume_website_url }}" target="_blank" title="Website">{% include icons/icon-website.html %}</a></li>
-          {% endif %}
-        </ul>
-        {% endif %}
-
-        {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button" itemprop="email">Contact me</a>
-        {% endif %}
-
-        <div class="scroll-indicator" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PRINT HEADER (print only) ===== -->
-    <header class="print-header print-only" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-      <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
-      <h1 class="print-name" itemprop="name">{{ site.resume_name }}</h1>
-      <p class="print-title" itemprop="jobTitle">{{ site.resume_title }}</p>
-      <div class="print-contact">
-        <span itemprop="email">{{ site.resume_contact_email }}</span>
-        {% if site.resume_social_links.resume_website_url %}
-        &ensp;|&ensp;<span>{{ site.resume_social_links.resume_website_url | replace: 'https://', '' }}</span>
-        {% endif %}
-        {% if site.resume_social_links.resume_linkedin_url %}
-        &ensp;|&ensp;<span>{{ site.resume_social_links.resume_linkedin_url | replace: 'https://www.', '' }}</span>
-        {% endif %}
-      </div>
-      {% if site.resume_header_intro %}
-      <div class="print-intro">{{ site.resume_header_intro }}</div>
-      {% endif %}
-    </header>
-
-    <!-- ===== SECTION NAV (web only) ===== -->
-    <nav class="section-nav no-print">
-      <div class="section-nav-inner">
-        {% if site.resume_section_experience %}<a href="#experience">Experience</a>{% endif %}
-        {% if site.resume_section_skills %}<a href="#skills">Skills</a>{% endif %}
-        {% if site.resume_section_principles %}<a href="#principles">Principles</a>{% endif %}
-        <a href="#about">About</a>
-      </div>
-    </nav>
-
-    <!-- ===== MAIN CONTENT ===== -->
-    <div class="content-wrapper">
-
-      <!-- Print-only: Technical Experience Summary -->
-      <section class="print-tech-summary print-only">
-        <header class="section-header">
-          <h2>Technical Experience</h2>
-        </header>
-        <div class="print-tech-grid">
-          <div class="unbreakable">
-            {% assign all_languages = site.data.experience | map: "languages" | compact | uniq | sort %}
-            <strong>Languages:</strong>
-            {% for language in all_languages %}{{ language }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        <!-- Print-only header -->
+        <header class="print-header print-only" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
+          <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
+          <h1 class="print-name" itemprop="name">{{ site.resume_name }}</h1>
+          <p class="print-title" itemprop="jobTitle">{{ site.resume_title }}</p>
+          <div class="print-contact">
+            <span itemprop="email">{{ site.resume_contact_email }}</span>
+            {% if site.resume_social_links.resume_website_url %}
+            &ensp;|&ensp;<span>{{ site.resume_social_links.resume_website_url | replace: 'https://', '' }}</span>
+            {% endif %}
+            {% if site.resume_social_links.resume_linkedin_url %}
+            &ensp;|&ensp;<span>{{ site.resume_social_links.resume_linkedin_url | replace: 'https://www.', '' }}</span>
+            {% endif %}
           </div>
-          <div class="unbreakable">
-            {% assign all_tools = site.data.experience | map: "tools" | compact | uniq | sort %}
-            <strong>Tools:</strong>
-            {% for tool in all_tools %}{{ tool }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-          </div>
-          <div class="unbreakable">
-            {% assign all_infrastructure = site.data.experience | map: "infrastructure" | compact | uniq | sort %}
-            <strong>Infrastructure:</strong>
-            {% for server in all_infrastructure %}{{ server }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-          </div>
-          <div class="unbreakable">
-            {% assign all_frameworks = site.data.experience | map: "frameworks" | compact | uniq | sort %}
-            <strong>Frameworks:</strong>
-            {% for framework in all_frameworks %}{{ framework }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-          </div>
-        </div>
-      </section>
-
-      {% if site.resume_section_experience %}
-      <!-- ===== EXPERIENCE ===== -->
-      <section class="experience-section" id="experience">
-        <h2 class="experience-heading no-print">Experience</h2>
-        <header class="section-header print-only">
-          <h2>Experience</h2>
+          {% if site.resume_header_intro %}
+          <div class="print-intro">{{ site.resume_header_intro }}</div>
+          {% endif %}
         </header>
 
-        {% for job in site.data.experience %}
-        <div class="story-block {% cycle 'story-odd', 'story-even' %}" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <div class="story-content">
-            <div class="unbreakable">
-              <div class="story-header">
-                <h3 class="story-company" itemprop="name">{{ job.company }}</h3>
-                <span class="story-duration">{{ job.duration }}</span>
-              </div>
-              <h4 class="story-position" itemprop="description">{{ job.position }}</h4>
+        <!-- ===== CAREER SUMMARY ===== -->
+        <section class="summary-section">
+          <div class="section-header">
+            <h2>Career Profile</h2>
+          </div>
+          <div class="summary-text">
+            <p>{{ site.resume_header_contact_info }}</p>
+            {% if site.resume_header_intro and site.resume_header_intro != "" %}
+            <p>{{ site.resume_header_intro }}</p>
+            {% endif %}
+          </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        {% if site.resume_section_experience %}
+        <section class="experience-section" id="experience">
+          <div class="section-header">
+            <h2>Experience</h2>
+          </div>
+
+          {% for job in site.data.experience %}
+          <div class="exp-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+            <div class="exp-date">{{ job.duration }}</div>
+            <div class="exp-body">
+              <div class="exp-company" itemprop="name">{{ job.company }}</div>
+              <div class="exp-position" itemprop="description">{{ job.position }}</div>
+
               {% if job.summary and job.summary != "" %}
-              <p class="story-summary">{{ job.summary }}</p>
+              <div class="exp-summary">{{ job.summary }}</div>
+              {% endif %}
+
+              {% if job.projects %}
+              <ul class="exp-projects">
+                {% for project in job.projects %}
+                <li>{{ project.description }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+
+              {% if job.languages or job.tools or job.infrastructure or job.frameworks %}
+              <div class="exp-tags">
+                {% if job.languages %}
+                  {% for lang in job.languages %}
+                  <span class="tag-lang">{{ lang }}</span>
+                  {% endfor %}
+                {% endif %}
+                {% if job.tools %}
+                  {% for tool in job.tools %}
+                  <span class="tag-tool">{{ tool }}</span>
+                  {% endfor %}
+                {% endif %}
+                {% if job.infrastructure %}
+                  {% for infra in job.infrastructure %}
+                  <span class="tag-infra">{{ infra }}</span>
+                  {% endfor %}
+                {% endif %}
+                {% if job.frameworks %}
+                  {% for framework in job.frameworks %}
+                  <span class="tag-framework">{{ framework }}</span>
+                  {% endfor %}
+                {% endif %}
+              </div>
               {% endif %}
             </div>
+          </div>
+          {% endfor %}
+        </section>
+        {% endif %}
 
-            {% if job.projects %}
-            <ul class="story-projects unbreakable">
-              {% for project in job.projects %}
-              <li>{{ project.description }}</li>
+        <!-- ===== PRINCIPLES ===== -->
+        {% if site.resume_section_principles and site.data.principles %}
+        <section class="principles-section" id="principles">
+          <div class="section-header">
+            <h2>Work Principles</h2>
+          </div>
+          {% if site.data.principles.description %}
+          <p class="principles-intro">{{ site.data.principles.description }}</p>
+          {% endif %}
+          {% for group in site.data.principles.principles %}
+          <div class="principle-group">
+            <div class="principle-title">{{ group.title }}</div>
+            <ul class="principle-rules">
+              {% for rule in group.rules %}
+              <li>
+                {{ rule.title }}
+                {% if rule.rules %}
+                <ul class="principle-sub-rules">
+                  {% for sub in rule.rules %}
+                  <li>{{ sub }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </li>
               {% endfor %}
             </ul>
-            {% endif %}
-
-            {% if job.languages or job.tools or job.infrastructure or job.frameworks %}
-            <div class="tech-band unbreakable">
-              {% if job.languages %}
-              <ul class="tech-group tech-tags-languages">
-                {% for language in job.languages %}
-                <li>{{ language }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-              {% if job.tools %}
-              <ul class="tech-group tech-tags-tools">
-                {% for tool in job.tools %}
-                <li>{{ tool }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-              {% if job.infrastructure %}
-              <ul class="tech-group tech-tags-infrastructure">
-                {% for server in job.infrastructure %}
-                <li>{{ server }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-              {% if job.frameworks %}
-              <ul class="tech-group tech-tags-frameworks">
-                {% for framework in job.frameworks %}
-                <li>{{ framework }}</li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </div>
-            {% endif %}
           </div>
-        </div>
-        {% endfor %}
-      </section>
-      {% endif %}
+          {% endfor %}
+        </section>
+        {% endif %}
 
-      <!-- ===== BOTTOM SECTIONS ===== -->
-      <section class="bottom-sections">
-        <div class="bottom-grid">
-
-          {% if site.resume_section_skills %}
-          <div class="bottom-col" id="skills">
-            <h3 class="bottom-heading">Skills</h3>
-            {% for skill in site.data.skills %}
-            <div class="bottom-item">
-              <h4 class="bottom-item-title">{{ skill.skill }}</h4>
-              <p class="bottom-item-text">{{ skill.description }}</p>
-            </div>
-            {% endfor %}
+        <!-- ===== PRINT-ONLY SKILLS (sidebar hidden in print) ===== -->
+        {% if site.resume_section_skills %}
+        <section class="print-skills print-only">
+          <div class="section-header">
+            <h2>Skills</h2>
           </div>
-          {% endif %}
-
-          {% if site.resume_section_principles %}
-          <div class="bottom-col" id="principles">
-            <h3 class="bottom-heading">Work Principles</h3>
-            <p class="bottom-item-text bottom-intro">{{ site.data.principles.description }}</p>
-            {% for principle in site.data.principles.principles %}
-            <div class="bottom-item">
-              <h4 class="bottom-item-title">{{ principle.title }}</h4>
-              {% for rule in principle.rules %}
-              <p class="bottom-rule-title">{{ rule.title }}</p>
-              {% for subrule in rule.rules %}
-              <p class="bottom-item-text">{{ subrule }}</p>
-              {% endfor %}
-              {% endfor %}
+          <div class="print-skills-grid">
+          {% for skill_group in site.data.skills %}
+            <div class="print-skill-block">
+              <strong>{{ skill_group.category }}:</strong>
+              {{ skill_group.items | join: ", " }}
             </div>
-            {% endfor %}
+          {% endfor %}
           </div>
-          {% endif %}
+        </section>
+        {% endif %}
 
-          <div class="bottom-col" id="about">
-            {% if site.resume_section_education %}
-            <h3 class="bottom-heading">Education</h3>
-            {% for education in site.data.education %}
-            <div class="bottom-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-              <h4 class="bottom-item-title" itemprop="name">{{ education.degree }}</h4>
-              <p class="bottom-item-text" itemprop="description">{{ education.uni }}</p>
-              <p class="bottom-item-meta">{{ education.year }}</p>
-            </div>
-            {% endfor %}
-            {% endif %}
-
-            {% if site.resume_section_interests %}
-            <h3 class="bottom-heading">Interests</h3>
-            <ul class="bottom-interests">
-              {% for interest in site.data.interests %}
-              <li>{{ interest.description }}</li>
-              {% endfor %}
-            </ul>
-            {% endif %}
+        <!-- ===== PRINT-ONLY EDUCATION ===== -->
+        {% if site.resume_section_education %}
+        <section class="print-education print-only">
+          <div class="section-header">
+            <h2>Education</h2>
           </div>
+          {% for education in site.data.education %}
+          <div class="print-edu-item">
+            <strong>{{ education.degree }}</strong> — {{ education.uni }}, {{ education.year }}
+          </div>
+          {% endfor %}
+        </section>
+        {% endif %}
 
-        </div>
-      </section>
+        <footer class="page-footer">
+          <div class="footer-line">
+            <span class="no-print">Based on <a href="https://github.com/fr123k/resume" class="icon-link" itemprop="sameAs" target="_blank">{% include icons/icon-github.html %}</a></span>
+            <span class="print-only footer-print-link">Based on <a href="https://github.com/fr123k/resume" itemprop="sameAs">https://github.com/fr123k/resume</a></span>
+          </div>
+        </footer>
 
-      <footer class="page-footer">
-        <div class="footer-line">
-          <img src="/images/logo_fr123k.png" alt="logo" class="logo black print-only" itemprop="image"/>
-          <span class="no-print">Based on <a href="https://github.com/fr123k/resume" class="icon-link" itemprop="sameAs" target="_blank">{% include icons/icon-github.html %}</a></span>
-          <span class="print-only footer-print-link">Based on <a href="https://github.com/fr123k/resume" itemprop="sameAs">https://github.com/fr123k/resume</a></span>
-        </div>
-      </footer>
+      </main>
 
     </div>
+
   </body>
 </html>
