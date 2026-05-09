@@ -1,21 +1,47 @@
 // Variables
 // ---------------------------------------/
 
-$container-width: 100% !default;
-$grid-gutter:     10px !default;
+// Colors - Modern Slate + Teal palette
+$sidebar-bg:        #1e293b;
+$sidebar-text:      #cbd5e1;
+$sidebar-heading:   #ffffff;
+$sidebar-divider:   rgba(255, 255, 255, 0.1);
 
-// Colors
+$accent:            #0d9488;
+$accent-light:      rgba(13, 148, 136, 0.1);
+$accent-hover:      #0f766e;
+
+$bg:                #f8fafc;
+$card-bg:           #ffffff;
+$text-color:        #334155;
+$heading-color:     #0f172a;
+$muted:             #64748b;
+$border:            #e2e8f0;
+
 $white:             #fff;
 $black:             #333;
 
-// Styles
-$text_color:        $black;
+// Tag colors
+$tag-lang-bg:       rgba(99, 102, 241, 0.1);
+$tag-lang-color:    #4f46e5;
+$tag-tool-bg:       rgba(13, 148, 136, 0.1);
+$tag-tool-color:    #0d9488;
+$tag-infra-bg:      rgba(245, 158, 11, 0.1);
+$tag-infra-color:   #d97706;
+$tag-framework-bg:  rgba(236, 72, 153, 0.1);
+$tag-framework-color: #db2777;
 
-// Font stack
-$body-font: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol" !default;
+// Typography
+$font-sans:         "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading:      "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-mono:         "JetBrains Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-// The base body size
-$body-font-size: 13px !default;
+$font-size-base:    15px;
+$line-height-base:  1.6;
 
-// Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+// Layout - Narrative
+$story-max-width:   900px;
+$section-nav-height: 50px;
+$hero-min-height:   100vh;
+$container-width:   100%;
+$grid-gutter:       10px;
