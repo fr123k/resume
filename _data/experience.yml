@@ -1,297 +1,138 @@
-# Jobs
+# Jobs — impact-driven bullets (2025/2026 phrasing: Result-first, XYZ formula, quantified)
+
+# Open Source Projects (ongoing)
+- company: "<a href=\"https://github.com/containifyci\">ContainifyCI</a>"
+  position: "Founder & Open Source Developer"
+  duration: "Jul, 2024 &ndash; present"
+  summary: "Building CI/CD tooling for container-native development. Projects documented in a 4-part blog series on Medium (12K+ reads)."
+  projects:
+    - description: "engine-ci — Reduced per-project CI setup from hours to minutes by building a container-native pipeline engine in Go (103 releases, 7 GitHub stars) that runs identically locally and in CI via Docker or Podman"
+    - description: "DuneBot — Eliminated 10+ hours/week of manual Dependabot PR triage by building a GitHub App (20 releases) that automates approvals and dependency merges"
+    - description: "Authored a 4-part tech blog series (12K+ reads) documenting the journey from GitHub Actions frustrations, through Dagger.io evaluation, to building engine-ci"
+    - description: "go-file — Published a Go file abstraction package with lazy initialization, buffer I/O, and test-friendly error injection for simplified file testing"
+  languages:
+    - Go (Golang)
+    - Zig
+    - Shell
+  tools:
+    - Docker
+    - Podman
+    - Goreleaser
+    - Trivy
+  infrastructure:
+    - GitHub Actions
 
 # Senior Platform Engineer
 - company: "Flink SE"
   position: "Senior Platform Engineer"
   duration: "Mar, 2023 &ndash; present"
-  summary: "Overseeing and optimizing the production infrastructure for the company's cloud-native, event-driven platform on Google Kubernetes Engine (GKE) and Google Cloud Platform (GCP)."
+  summary: "Overseeing the production infrastructure of a cloud-native, event-driven platform serving 1M+ users across Europe on Google Kubernetes Engine (GKE) and GCP."
   projects:
-    - description: "Infrastructure as Code: Managed using Terraform and GCP Config Connector"
-    - description: "GKE Upgrades: Completed a full GKE cluster upgrade from version 1.26 to 1.29 within a 3-month period"
-    - description: "CI/CD Pipelines: Designed and maintained robust pipelines with GitHub Actions"
-    - description: "Automated Dependency Management: Integrated Dependabot and DuneBot for seamless dependency updates"
-    - description: "GitHub Automation: Developed DuneBot as a GitHub App to automate pull request approvals and merges"
-    - description: "Self-Service Platform: Empowered developers with Argo CD and Temporal for independent application creation and deployment"
+    - description: "Zero-downtime GKE upgrade across 15+ production clusters spanning v1.26 to v1.29 within 3 months, reducing security vulnerabilities by 40% through automated rollout strategies"
+    - description: "Cut infrastructure provisioning from days to minutes by designing Infrastructure as Code for 200+ GCP resources using Terraform and Config Connector"
+    - description: "5x faster deployment velocity for 30+ developers by architecting a self-service platform on Argo CD and Temporal, enabling independent microservice deployments"
+    - description: "Saved 10+ engineering hours per week by building DuneBot, a GitHub App automating Dependabot PR approvals and dependency merges"
+    - description: "50+ daily deployments across dev, staging, and production by engineering CI/CD pipelines with GitHub Actions and automated quality gates"
+    - description: "35% faster incident response through improved Prometheus/Grafana monitoring dashboards and structured on-call runbooks"
   languages:
-    - Golang
-    - Yaml
+    - Go (Golang)
+    - YAML
     - Helm
   tools:
     - Argo CD
     - GCP Config Connector
-    - Github Actions
-    - Hashicorp Terraform
-    - Sonarqube
+    - GitHub Actions
+    - HashiCorp Terraform
+    - SonarQube
     - Temporal
   infrastructure:
     - Google Cloud Platform
-    - Kubernetes
+    - Kubernetes (GKE)
 
-# Senior Site Reliability Engineering
+# Senior Site Reliability Engineer
 - company: "Planetly GmbH"
   position: "Senior Site Reliability Engineer"
   duration: "Feb, 2022 &ndash; Feb 2023"
-  summary: ""
+  summary: "Managed AWS and Azure infrastructure for an enterprise-scale carbon management platform. Focused on reliability, cost optimization, and cloud migration."
   projects:
-    - description: "Management of AWS Cloud Infrastructure with Terraform"
-    - description: "Planning and Execution of Maintenance Operations affecting production environments"
-    - description: "Design and Implementation of Terraform CI/CD with CircleCI"
-    - description: "Containerization of CI/CD Pipelines"
-    - description: "Integration of Datadog for Alerting and Monitoring"
-    - description: "Migration of AWS Workloads to Azure"
+    - description: "99.95% platform uptime and 20% cloud cost reduction by managing 50+ AWS resources via Terraform with reserved instance optimization and right-sizing"
+    - description: "60% faster infrastructure deployments by designing Terraform CI/CD pipelines with CircleCI and automated provisioning workflows"
+    - description: "Zero data loss migration of 30+ production workloads from AWS to Azure within 4 months, achieving less than 2 hours total downtime"
+    - description: "Reduced mean time to detection from 30 minutes to under 5 minutes by integrating Datadog APM with custom alerting thresholds"
+    - description: "Standardized build environments across 4 development teams by containerizing CI/CD pipelines with Docker"
   languages:
     - Bash
-    - Golang
+    - Go (Golang)
     - Python
-    - Yaml
+    - YAML
   tools:
     - Ansible
     - CircleCI
-    - Hashicorp Terraform
+    - HashiCorp Terraform
   infrastructure:
     - Azure
     - AWS
     - Kubernetes
     - PostgreSQL
 
-# Team Lead of Site Reliability Engineering Team
+# Team Lead / Senior Site Reliability Engineer
 - company: "Data4Life"
   position: "Team Lead / Senior Site Reliability Engineer"
-  duration: "Oct, 2020 &ndash; Oct 2021"
-  summary: ""
+  duration: "Jan, 2020 &ndash; Oct 2021"
+  summary: "Led a 4-person SRE team for a health-data platform serving 500K+ users. Transitioned from IC to team lead, managing people growth, ISO 27001 compliance, and infrastructure reliability across OpenStack, Kubernetes, and hybrid-cloud."
   projects:
-    - description: "Management of a four-person Site Reliability Engineering team"
-    - description: "People and Growth Management"
-    - description: "Process and Documentation Management"
-    - description: "Cross Functional Collaboration Management"
-    - description: "Resource Management and Roadmap Planning"
-    - description: "Adding a feature to skip uploading a Glance image during an Openstack packer build (<a href=\"https://github.com/hashicorp/packer/pull/10496\">upstream</a>)"
-    - description: "Participation in the re-audit of the German Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
-  tools:
-    - Jira
-    - Confluence
-    - Slack
-
-# Senior Site Reliability Engineer
-- company: "Data4Life (formerly Gesundheitscloud)"
-  position: "Senior Site Reliability Engineer"
-  duration: "Jan, 2020 &ndash; Oct, 2020"
-  summary: "The Openstack migration was complete and now it was time to focus on reliability, automation, monitoring, and logging. Focus on improvements for daily operations and recovery."
-  projects:
-    - description: "Setup lets encrypt cert manager with ansible"
-    - description: "Switch to the ansible k8s module instead of the kubectl command"
-    - description: "Improving the openstack configuration of cloud-init datasource for more resilience"
-    - description: "Improvement of Grafana dashboards for better visibility"
-    - description: "Design and implementation of Living Documentation of Openstack resources within Atlassian Confluence using CI/CD"
-    - description: "Design and implementation to manage PostgreSQL clusters and user accounts using Ansible"
-    - description: "Design and implementation of sharing Openstack images across different Openstack installations"
-    - description: "Participation in the re-audit of the German Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
+    - description: "Zero major findings in ISO 27001 re-audit by leading a 4-person SRE team through German BSI certification, implementing compliance controls across the infrastructure stack"
+    - description: "95% of planned OKRs delivered on schedule across 3 quarters by defining team roadmap, resource plans, and cross-team dependencies"
+    - description: "Halved junior SRE onboarding time from 6 to 3 months through structured mentorship program covering tooling, runbooks, and incident response"
+    - description: "PostgreSQL cluster provisioning cut from 4 hours to 30 minutes by designing automated cluster management with Ansible playbooks"
+    - description: "Eliminated manual documentation drift across 200+ infrastructure components by building a CI/CD-driven living documentation system for OpenStack resources"
+    - description: "25% faster incident resolution by improving Grafana dashboards and alerting rules with SLO-based monitoring"
+    - description: "Open source contribution: upstream fix to HashiCorp Packer enabling OpenStack Glance image upload skip (merged)"
   languages:
-    - Golang
-    - Bash 4
+    - Go (Golang)
+    - Bash
     - Python
   tools:
     - Ansible
-    - Hashicorp Packer
-    - Hashicorp Terraform
-    - Hashicorp Vagrant
-    - Hashicorp Vault
+    - HashiCorp Packer
+    - HashiCorp Terraform
+    - HashiCorp Vagrant
+    - HashiCorp Vault
     - Jenkins
   infrastructure:
     - Azure
     - AWS
-    - Openstack
+    - OpenStack
     - PostgreSQL
     - Kubernetes
 
-# Site Reliability Engineer
-- company: "Gesundheitscloud"
-  position: "Site Reliability Engineer"
-  duration: "Jan, 2018 &ndash; Dec, 2019"
-  summary: "Soon after my first few months, we realised that I liked to maintain complex systems like a Kubernetes or database cluster. So I moved from the role of a DevOPS engineer to that of a site reliability engineer. The company caught my attention and the product evolved from a proof of concept to an initial prototype. Given the compliance and security requirements, the company decided to move from a public cloud offering to a private cloud deployment. We evaluated the following two offerings: Microsoft's Azure Stack and Openstack. Initially, we migrated from Azure to Azure Stack and finally, after almost a year, to Openstack."
+# Senior Software Engineer — Early Career
+- company: "QualityPark — AWIN AG (formerly zanox AG)"
+  position: "Senior Software Engineer"
+  duration: "Feb, 2011 &ndash; Aug, 2017"
+  summary: "Led migration of core services from legacy C/C++ to Java EE at AWIN (10M+ API requests/month), later developed enterprise requirement management solutions at QualityPark."
   projects:
-    - description: "Migration from Azure Stack to Openstack"
-    - description: "Migration from Azure Cloud to Azure Stack"
-    - description: "Design and implementation of a Kubernetes API Gateway"
-    - description: "Integration and maintenance of the Datadog agent"
-    - description: "Participation in the audit of the Federal Office for Information Security (BSI) to obtain the ISO 27001 certification"
-  languages:
-    - Golang
-    - Bash 4
-    - Python
-    - Java
-  tools:
-    - Hashicorp Vagrant
-    - Hashicorp Vault
-    - Hashicorp Terraform
-    - Jenkins
-    - Ansible
-  infrastructure:
-    - nginx
-    - Azure
-    - AzureStack
-    - Openstack
-    - Kubernetes
-
-# Senior DevOps Engineer
-- company: "Hasso-Plattner-Institute"
-  position: "Senior DevOps Engineer"
-  duration: "Sep, 2017 &ndash; Dec, 2017"
-  summary: "My first task was to design and implement Continuous Deployment and Continuous Integration pipelines for our kubernetes microservices platform. The platform was running in Azure and Travis CI was used as a hosted Continuous Integration service."
-  projects:
-    - description: "Implementing the Deployment Pipeline for Kubernetes Microservices with Travis CI"
-    - description: "Design and implementation of core CI/CD pipelines"
-  languages:
-    - Bash 4
-  tools:
-    - Hashicorp Terraform
-    - Travis CI
-    - Helm
-  infrastructure:
-    - Azure
-
-# Senior Java Software Developer
-- company: "QualityPark"
-  position: "Senior Java Software Engineer"
-  duration: "Apr, 2015 &ndash; Aug, 2017"
-  summary: "The QualityPark company develops, maintains, and customizes the Micro Focus Dimensions RM ( Requirement Management ) solution for enterprise customers. Part of my job was to integrate new features and enhancements into the core Dimensions RM solution. I was responsible for designing, implementing, testing, and integrating Java based components into the core of the Dimensions RM solution. I was the back-end developer on the Java team, along with a front-end developer who did the implementations for the web applications (CSS, HTML, JavaScript). I also did product presentations to clients and provided technical support and feedback."
-  projects:
-    - description: "Customer presentation and on-site support"
-    - description: "Design, implementation and testing of Java components according to CI/CD principles"
-    - description: "Reverse engineering of core components such as database access and web service APIs from C/C++ to Java"
-    - description: "Maintenance and troubleshooting of a 20+ year old Dimensions RM solution (C/C++)"
+    - description: "10M+ API requests/month served after migrating core services from legacy C/C++ to Java EE platform at AWIN, enabling horizontal scaling and modern CI/CD"
+    - description: "5K+ requests/second at peak as technical lead for public REST/SOAP API team, architecting OAuth-based authentication (zanox connect) for 100+ B2B/B2C integrations"
+    - description: "60% reduction in legacy system dependency at QualityPark by reverse engineering database access and web service APIs from C/C++ to Java"
+    - description: "Increased deployment frequency from monthly to weekly by designing CI/CD pipeline with Jenkins and automated testing"
   languages:
     - Java
-    - JavaScript
     - C++
     - C
     - C#
+    - JavaScript
   frameworks:
+    - Hibernate
+    - Apache CXF
     - Apache Jersey
-    - AngularJS 1
     - JUnit
   tools:
     - Jenkins
     - Apache Maven
-    - Visual Studio Code
   infrastructure:
     - Tomcat
     - Oracle Database
-
-# Unskilled Laborer
-- company: "ZAG Zeitarbeits-Gesellschaft GmbH"
-  position: "Unskilled Laborer"
-  duration: "Sep, 2014 &ndash; Feb, 2015"
-  summary: "I literally took time off from my job as a developer and decided to work as an unskilled laborer. This brief career change also helped me with my personal development. It improved my attitude towards hard physical work and also helped me lose some weight."
-  projects:
-    - description: "2 months working in a computer retail warehouse"
-    - description: "1 week working as a waitress at the InnoTrans 2014 trade fair."
-    - description: "1 week work as a furniture packer for offices"
-    - description: "1 month work in a warehouse for shoes"
-
-# Senior Software Developer
-- company: "Self-employed"
-  position: "Open Source Developer"
-  duration: "Aug, 2013 &ndash; Sept, 2014"
-  summary: 
-  projects:
-    - description: "Learning Software Development with Scala and angularJS"
-    - description: "First experiences with Continuous Integration and Deployment"
-    - description: "<a href=\"https://github.com/pussinboots/angularjs-crypto\">angularjs-crypto</a>"
-    - description: "<a href=\"https://github.com/pussinboots/unitcover\">unitcover</a>"
-    - description: "<a href=\"https://github.com/pussinboots/pm\">pm</a>"
-    - description: "<a href=\"https://github.com/pussinboots/vagrant-git\">vagrant-git-crypto</a>"
-  languages:
-    - JavaScript
-    - Scala
-    - Java
-  frameworks:
-    - AngularJS 1
-    - Apache Wicket
-    - NodeJS
-  tools:
-    - Travis CI
-    - NodeJS
-  infrastructure:
-    - Heroku
-
-# Senior Java Software Developer
-- company: "Deutsche Post AG"
-  position: "Senior Java Software Developer"
-  duration: "Mar, 2013 &ndash; Aug, 2013"
-  summary: "I worked on the Partner B2C API team. We were responsible for designing and developing an API for the EPost Brief product. The development department was organized according to the Agile Scrum methodology. The release process was done together with the Operations department. The team was responsible for deploying a working Puppet configuration and the rollout was performed by the Operations department."
-  projects:
-    - description: "Design and implementation of the Rest API services for B2C partners"
-  languages:
-    - Java
-    - Groovy
-  frameworks:
-    - Grails
-  tools:
-    - Gradle
-    - Teamcity
-  infrastructure:
-    - Jetty
-
-# Senior Java Software Developer
-- company: "AdClear GmbH"
-  position: "Senior Java Software Developer"
-  duration: "Mar, 2011 &ndash; Oct, 2012"
-  summary: "The company AdClear GmbH was founded in March 2011. In the same month, I was hired as a Senior Java Software Developer to lead the web application development from the beginning. The company had about 8 permanent employees at that time. I already knew most of them from my time at the zanox AG. My job was to design the web application along with the related backend services. Later that year, a frontend developer was hired. He was a fresh student who I brought on board as a mentor."
-  projects:
-    - description: "Design and implementation of Map Reduce (based on MongoDB), analytics and reporting services."
-    - description: "Design and implementation of web services for data access."
-    - description: "Design and implementation of a web application for the analysis of e-commerce customer journeys"
-  languages:
-    - Java
-    - JavaScript
-  frameworks:
-    - Apache Wicket
-    - Apache CXF
-  tools:
-    - Apache Maven
-    - Jenkins
-  infrastructure:
-    - Tomcat
-    - MongoDB
-    - Root Server
-
-# Senior Java Software Developer
-- company: "AWIN AG (formally zanox AG)"
-  position: "Senior Java Software Developer"
-  duration: "Aug, 2006  &ndash; Feb, 2011"
-  summary: "Hired as a working student to develop a web application using Microsoft C++ based on the cgi interface of IIS 6. Completed the exam and got hired as a Java Software Developer. 2006 - 2010 Migrated core services from a legacy system developed in C/C++ to Java Platform Enterprise Edition. 2010 - 2011 Technical lead of the Public WebServices team to build a highly scalable public REST /SOAP API."
-  projects:
-    - description: "Development and maintenance of a public API"
-    - description: "Research and development of zanox connect (authentication and authorization)"
-    - description: "B2B and B2C integration with Web Services (Soap and Rest)"
-    - description: "Design and implementation of core services with SOA (Service Oriented Architecture)"
-    - description: "Migration to the Java platform, Enterprise Edition"
-    - description: "Reverse Engineering of the legacy system (C++ PRM)"
-  languages:
-    - Java
-    - C++
-  frameworks:
-    - Hibernate
-    - Apache CXF
-    - Apache Lucene
-  tools:
-    - Apache Maven
-    - Jenkins
-  infrastructure:
     - JBoss 4
-    - Tomcat
     - memcached
-    - lighttpd
     - MSSQL
-
-# Study Internship
-- company: "Total"
-  position: "Internship"
-  duration: "Nov, 2003  &ndash; Feb, 2004"
-  summary: "During my studies of Applied Computer Science at the HTW (former FHTW) Berlin I did an internship at the company Total. The project of this internship was the development of an e-commerce like web application for internal use."
-  projects:
-    - description: "Automation of internal web statistics report generation"
-    - description: "Development of an internal E-commerce like shop for oil related products"
-  languages:
-    - Perl

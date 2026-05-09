@@ -1,10 +1,81 @@
-# Skills
+# Technical Skills — categorized for ATS keyword matching
 
-- skill: Mentorship
-  description: "I have several years of experience in leading and mentoring people and organizations."
+- category: "Cloud & Infrastructure"
+  items:
+    - Google Cloud Platform (GCP)
+    - Amazon Web Services (AWS)
+    - Microsoft Azure
+    - OpenStack
+    - Cloud-Native Architecture
 
-- skill: Software/System Architecture
-  description: "With over 15 years of experience in software development. I have developed a sense of reasonable good and bad architecture. In my opinion, a reasonably good architecture requires that the technical and non-technical requirements are known in advance. In most cases, the communication structure of a company is also reflected in the software/system architecture, especially when it is developed and implemented by multiple teams (Conway's Law)."
+- category: "Container & Orchestration"
+  items:
+    - Kubernetes (GKE, EKS, AKS)
+    - Docker
+    - Helm
+    - Argo CD
+    - Kustomize
 
-# - skill: Improvement Potential
-#   description: ""
+- category: "Infrastructure as Code"
+  items:
+    - HashiCorp Terraform
+    - GCP Config Connector
+    - Pulumi
+    - Ansible
+    - Packer
+    - Vagrant
+
+- category: "CI/CD & Automation"
+  items:
+    - GitHub Actions
+    - CircleCI
+    - Jenkins
+    - Travis CI
+    - Dependabot
+    - DuneBot
+
+- category: "Programming Languages"
+  items:
+    - Go (Golang)
+    - Python
+    - Bash
+    - Java
+    - TypeScript / JavaScript
+    - Zig
+
+- category: "Observability & Monitoring"
+  items:
+    - Prometheus
+    - Grafana
+    - Datadog
+    - OpenTelemetry
+    - ELK Stack
+
+- category: "Platform Engineering"
+  items:
+    - Internal Developer Platform (IDP)
+    - Self-Service Infrastructure
+    - Developer Experience (DX)
+    - Temporal
+
+- category: "Security & Compliance"
+  items:
+    - ISO 27001
+    - HashiCorp Vault
+    - Secrets Management
+    - Supply Chain Security
+
+- category: "Databases & Messaging"
+  items:
+    - PostgreSQL
+    - MongoDB
+    - MSSQL
+    - Redis / Memcached
+
+- category: "Leadership & Mentoring"
+  items:
+    - Team Leadership (4+ person teams)
+    - Technical Mentorship
+    - Cross-Functional Collaboration
+    - Roadmap Planning
+    - Agile / Scrum
