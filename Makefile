@@ -1,11 +1,18 @@
-OPEN=$(shell grep alias\ open= ~/.bashrc | awk -F"'" '{print $$2}')
+# Build the project Docker image (Ruby 3.3 + Jekyll 4.4)
+build:
+	docker build -t resume .
 
-stop:
-	docker stop -t 30 jekyll || true
-	docker rename jekyll jekyllStopped || true
-
+# Run the site locally via the project Dockerfile
 local: stop
 	rm -rf ./_site
 	rm -rf Gemfile.lock
 	rm -rf .jekyll-metadata
-	docker run -d --rm -v $(PWD):/srv/jekyll -e DEBUG=true --publish [::1]:4000:4000 -p 4000:4000 --name jekyll jekyll/jekyll jekyll serve --watch --drafts --force_polling
+	docker run -d --rm -v $(PWD):/home/app --publish [::1]:4000:4000 -p 4000:4000 --name resume resume jekyll serve --watch --drafts --force_polling --host 0.0.0.0
+
+stop:
+	docker stop -t 30 resume || true
+	docker rename resume resumeStopped || true
+
+# Run via bundler directly (without Docker)
+serve:
+	bundle exec jekyll serve
