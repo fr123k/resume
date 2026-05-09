@@ -14,17 +14,11 @@ bundle exec jekyll serve
 # Open http://localhost:4000
 ```
 
-### With Docker (using jekyll/jekyll image)
+### With Docker (recommended)
 
 ```bash
-make local
-```
-
-### With Docker (using project Dockerfile)
-
-```bash
-docker image build -t resume-template .
-docker run --rm --name resume-template -v "$PWD":/home/app --network host resume-template
+make build    # builds the Docker image (Ruby 3.3 + Jekyll 4.4)
+make local    # runs the site at http://localhost:4000
 ```
 
 ## Project Structure
