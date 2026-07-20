@@ -37,11 +37,20 @@
 - category: "Programming Languages"
   items:
     - Go (Golang)
+    - Zig
     - Python
     - Bash
     - Java
     - TypeScript / JavaScript
-    - Zig
+
+- category: "LLM & AI Infrastructure"
+  items:
+    - LLM Provider Integration (Anthropic, OpenAI, Gemini, Vertex)
+    - SSE / HTTP Streaming
+    - Token Compression
+    - Agent Orchestration
+    - Container Sandboxing
+    - Multi-Agent Systems
 
 - category: "Observability & Monitoring"
   items:
