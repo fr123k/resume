@@ -1,26 +1,30 @@
 # Jobs — impact-driven bullets (2025/2026 phrasing: Result-first, XYZ formula, quantified)
 
 # Open Source Projects (ongoing)
-- company: "<a href=\"https://github.com/containifyci\">ContainifyCI</a>"
+- company: "<a href=\"https://github.com/fr12k/franky\">Open Source — LLM Infrastructure & Platform Tooling</a>"
   position: "Founder & Open Source Developer"
   duration: "Jul, 2024 &ndash; present"
-  summary: "Building CI/CD tooling for container-native development. Projects documented in a 4-part blog series on Medium (12K+ reads)."
+  summary: "Building LLM infrastructure, platform tooling, and container-native CI/CD. Author of Franky (streaming LLM agent framework), zompress (token compression), and engine-ci (container-native CI/CD)."
   projects:
-    - description: "engine-ci — Reduced per-project CI setup from hours to minutes by building a container-native pipeline engine in Go (103 releases, 7 GitHub stars) that runs identically locally and in CI via Docker or Podman"
+    - description: "<a href=\"https://github.com/fr12k/franky\">Franky</a> — Built a provider-agnostic streaming LLM agent framework in Zig (50K+ LOC, 881 tests, 7 LLM providers) with SSE transport, per-phase timeouts, capability-based RBAC, session persistence + branching, and 4 run modes (print/interactive/rpc/proxy)"
+    - description: "<a href=\"https://github.com/fr12k/zompress\">zompress</a> — Designed an LLM token compression library in Zig that optimizes context window usage for long agent conversations, reducing inference cost"
+
+    - description: "engine-ci — Reduced per-project CI setup from hours to minutes by building a container-native pipeline engine in Go (103 releases) that runs identically locally and in CI via Docker or Podman"
     - description: "DuneBot — Eliminated 10+ hours/week of manual Dependabot PR triage by building a GitHub App (20 releases) that automates approvals and dependency merges"
-    - description: "Authored a 4-part tech blog series (12K+ reads) documenting the journey from GitHub Actions frustrations, through Dagger.io evaluation, to building engine-ci"
-    - description: "go-file — Published a Go file abstraction package with lazy initialization, buffer I/O, and test-friendly error injection for simplified file testing"
   languages:
     - Go (Golang)
     - Zig
+    - Python
     - Shell
   tools:
     - Docker
     - Podman
     - Goreleaser
     - Trivy
-  infrastructure:
     - GitHub Actions
+  infrastructure:
+    - SSE / HTTP Streaming
+    - LLM Provider APIs
 
 # Senior Platform Engineer
 - company: "Flink SE"

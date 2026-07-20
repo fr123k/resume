@@ -1,6 +1,6 @@
 # Site settings
-title: "Software Engineer Resume"
-description: "The Software Engineer job resume of Frank Ittermann."
+title: "Frank Ittermann — Resume"
+description: "The resume of Frank Ittermann — platform engineer with 15+ years of experience."
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/126682769?v=4
@@ -28,6 +28,7 @@ resume_avatar:                  "true"
 resume_name:                    "Frank Ittermann"
 resume_title:                   "Senior Platform Engineer"
 
+
 # used for the contact button in _layouts/resume.html
 # resume_contact_email:           "frank.ittermann@yahoo.com"
 
@@ -35,7 +36,7 @@ resume_title:                   "Senior Platform Engineer"
 resume_contact_telephone:       ""
 resume_contact_address:         ""
 
-resume_header_contact_info:     "Platform engineer with 15+ years of experience designing and operating cloud-native infrastructure, Kubernetes platforms, and distributed systems at scale. Focused on developer productivity, self-service platforms, and site reliability. Creator of engine-ci (container-native CI/CD engine) and DuneBot (GitHub App for automated dependency management). Writes about CI/CD, platform engineering, and developer tooling on Medium."
+resume_header_contact_info:     "Platform engineer with 15+ years of experience designing and operating cloud-native infrastructure, Kubernetes platforms, and distributed systems at scale. Focused on developer productivity, self-service platforms, and site reliability. Creator of Franky (streaming LLM agent framework), engine-ci (container-native CI/CD engine), and DuneBot (GitHub App for automated dependency management). Writes about CI/CD, platform engineering, and developer tooling on Medium."
 display_header_contact_info:    "true"
 
 resume_header_intro: ""

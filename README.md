@@ -2,7 +2,7 @@
 
 *A Jekyll + GitHub Pages powered resume site for [Frank Ittermann](https://resume.fr123k.uk).*
 
-This is a heavily customized fork of [jglovier/resume-template](https://github.com/jglovier/resume-template). The original sidebar layout has been replaced with a custom single-column narrative design ("Hyde" theme) featuring a dark hero section, alternating story blocks, color-coded tech tags, and a sophisticated print/PDF stylesheet.
+This is a heavily customized fork of [jglovier/resume-template](https://github.com/jglovier/resume-template). The original sidebar layout has been replaced with a custom two-column design ("Hyde" theme) featuring a dark sidebar, alternating experience blocks, color-coded tech tags, and a sophisticated print/PDF stylesheet.
 
 ## Running locally
 
@@ -30,13 +30,19 @@ make local    # runs the site at http://localhost:4000
 | `_includes/` | Partials: head, sidebar, analytics, SVG icons |
 | `_data/` | YAML content: experience, education, skills, principles, interests |
 | `_sass/` | SCSS partials — the custom "Hyde" theme |
-| `_sass/_hyde.scss` | Main stylesheet (hero, story blocks, tech bands, bottom sections) |
+| `_sass/_hyde.scss` | Main stylesheet (sidebar, story blocks, tech bands, bottom sections) |
 | `_sass/_print.scss` | Print/PDF layout (A4, 11pt Calibri) |
 | `CNAME` | Custom domain: `resume.fr123k.uk` |
 
 ## Customizing
 
 Edit `_config.yml` to change name, title, social links, and toggle sections on/off. Resume content lives in the `_data/` directory as structured YAML files.
+
+## Recent Updates
+
+- Added **Franky** (streaming LLM agent framework) and **zompress** (token compression) to the open-source section
+- Added **LLM & AI Infrastructure** skills category
+- Updated career profile to mention Franky
 
 ## License
 
