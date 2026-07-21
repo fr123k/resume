@@ -1,43 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
-    <!-- ===== TWO-COLUMN LAYOUT ===== -->
+    <!-- Skip link for accessibility (WCAG 2.1) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Theme toggle (dark/light mode) -->
+    <button class="theme-toggle no-print" aria-label="Switch to dark mode" title="Toggle dark mode">
+      <!-- Moon icon (shown in light mode) -->
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+      <!-- Sun icon (shown in dark mode) -->
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1" x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+    </button>
+
+    <!-- ===== SINGLE-COLUMN LAYOUT (2026: ATS-safe, no sidebar) ===== -->
     <div class="page-wrapper">
 
-      <!-- ===== SIDEBAR (web only) ===== -->
-      {% include sidebar.html %}
-
       <!-- ===== MAIN CONTENT ===== -->
-      <main class="main-content">
+      <main class="main-content" id="main-content" role="main">
 
-        <!-- Print-only header -->
-        <header class="print-header print-only" itemscope itemtype="http://schema.org/Person">
-          <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-          <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
-          <h1 class="print-name" itemprop="name">{{ site.resume_name }}</h1>
-          <p class="print-title" itemprop="jobTitle">{{ site.resume_title }}</p>
-          <div class="print-contact">
-            <span itemprop="email">{{ site.resume_contact_email }}</span>
-            {% if site.resume_social_links.resume_website_url %}
-            &ensp;|&ensp;<span>{{ site.resume_social_links.resume_website_url | replace: 'https://', '' }}</span>
-            {% endif %}
-            {% if site.resume_social_links.resume_linkedin_url %}
-            &ensp;|&ensp;<span>{{ site.resume_social_links.resume_linkedin_url | replace: 'https://www.', '' }}</span>
+        <!-- ===== PRINT-ONLY COVER LETTER (page 1 of PDF) ===== -->
+        <section class="print-only cover-letter" aria-hidden="true">
+          <div class="cover-letter-header">
+            <h1 class="cover-letter-name">{{ site.resume_name }}</h1>
+            <p class="cover-letter-title">{{ site.resume_title }}</p>
+            <div class="cover-letter-contact">
+              {% if site.resume_social_links.resume_linkedin_url %}
+              <span>{{ site.resume_social_links.resume_linkedin_url | replace: 'https://www.', '' | replace: 'https://', '' }}</span>
+              {% endif %}
+              {% if site.resume_social_links.resume_github_url %}
+              <span>{{ site.resume_social_links.resume_github_url | replace: 'https://', '' }}</span>
+              {% endif %}
+              {% if site.resume_social_links.resume_website_url %}
+              <span>{{ site.resume_social_links.resume_website_url | replace: 'https://', '' }}</span>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="cover-letter-body">
+            <p>{{ site.resume_header_contact_info }}</p>
+            {% if site.resume_header_intro and site.resume_header_intro != "" %}
+            <p class="cover-letter-quote">&ldquo;{{ site.resume_header_intro }}&rdquo;</p>
             {% endif %}
           </div>
-          {% if site.resume_header_intro %}
-          <div class="print-intro">{{ site.resume_header_intro }}</div>
+
+          <!-- Print-only bottom bar: principles, education, interests -->
+          {% if site.resume_section_principles or site.resume_section_education or site.resume_section_interests %}
+          <div class="cover-letter-bottombar">
+
+            {% if site.resume_section_principles and site.data.principles %}
+            <div class="clb-block">
+              <div class="clb-title">Working Principles</div>
+              <ul class="clb-list">
+                {% for group in site.data.principles.principles %}
+                <li>{{ group.title }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+            {% if site.resume_section_education %}
+            <div class="clb-block">
+              <div class="clb-title">Education</div>
+              <ul class="clb-list">
+                {% for education in site.data.education %}
+                <li>{{ education.degree }} &mdash; {{ education.uni }} ({{ education.year }})</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+            {% if site.resume_section_interests %}
+            <div class="clb-block">
+              <div class="clb-title">Interests</div>
+              <ul class="clb-list">
+                {% for interest in site.data.interests %}
+                <li>{{ interest.description }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+        </section>
+
+        <!-- ===== PROFILE HEADER (web + print) ===== -->
+        <header class="profile-header" itemscope itemtype="http://schema.org/Person">
+          <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
+          <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
+          {% if site.resume_avatar == 'true' %}
+          <img src="{{ site.avatar }}" alt="{{ site.resume_name }}" class="profile-avatar no-print" itemprop="image" />
+          {% endif %}
+          <h1 class="profile-name" itemprop="name">{{ site.resume_name }}</h1>
+          <p class="profile-title" itemprop="jobTitle">{{ site.resume_title }}</p>
+
+          <!-- Contact + Social links -->
+          <div class="profile-contact">
+            {% if site.resume_contact_email %}
+            <a href="mailto:{{ site.resume_contact_email }}" class="contact-link" itemprop="email">{{ site.resume_contact_email }}</a>
+            {% endif %}
+            {% if site.resume_social_links.resume_website_url %}
+            <a href="{{ site.resume_social_links.resume_website_url }}" target="_blank" rel="noopener noreferrer" class="contact-link">medium.com/@frank.ittermann_46267</a>
+            {% endif %}
+            {% if site.resume_social_links.resume_linkedin_url %}
+            <a href="{{ site.resume_social_links.resume_linkedin_url }}" target="_blank" rel="noopener noreferrer" class="contact-link">frank-ittermann</a>
+            {% endif %}
+            {% if site.resume_social_links.resume_github_url %}
+            <a href="{{ site.resume_social_links.resume_github_url }}" target="_blank" rel="noopener noreferrer" class="contact-link">fr12k</a>
+            {% endif %}
+            {% if site.resume_social_links.resume_github_url2 %}
+            <a href="{{ site.resume_social_links.resume_github_url2 }}" target="_blank" rel="noopener noreferrer" class="contact-link">fr123k</a>
+            {% endif %}
+            {% if site.resume_social_links.resume_goodreads_url %}
+            <a href="{{ site.resume_social_links.resume_goodreads_url }}" target="_blank" rel="noopener noreferrer" class="contact-link">Goodreads</a>
+            {% endif %}
+          </div>
+
+          {% if site.resume_header_intro and site.resume_header_intro != "" %}
+          <div class="profile-intro">{{ site.resume_header_intro }}</div>
           {% endif %}
         </header>
 
-        <!-- ===== CAREER SUMMARY ===== -->
-        <section class="summary-section">
+        <!-- ===== PROFESSIONAL SUMMARY ===== -->
+        <section class="summary-section" aria-labelledby="summary-heading">
           <div class="section-header">
-            <h2>Career Profile</h2>
+            <h2 id="summary-heading">Professional Summary</h2>
           </div>
           <div class="summary-text">
             <p>{{ site.resume_header_contact_info }}</p>
@@ -49,13 +151,13 @@
 
         <!-- ===== EXPERIENCE ===== -->
         {% if site.resume_section_experience %}
-        <section class="experience-section" id="experience">
+        <section class="experience-section" id="experience" aria-labelledby="experience-heading">
           <div class="section-header">
-            <h2>Experience</h2>
+            <h2 id="experience-heading">Experience</h2>
           </div>
 
           {% for job in site.data.experience %}
-          <div class="exp-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <article class="exp-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
             <div class="exp-date">{{ job.duration }}</div>
             <div class="exp-body">
               <div class="exp-company" itemprop="name">{{ job.company }}</div>
@@ -74,100 +176,112 @@
               {% endif %}
 
               {% if job.languages or job.tools or job.infrastructure or job.frameworks %}
-              <div class="exp-tags">
+              <div class="exp-tags" aria-label="Technologies used">
                 {% if job.languages %}
-                  {% for lang in job.languages %}
+                  {% assign sorted_langs = job.languages | sort %}
+                  {% for lang in sorted_langs %}
                   <span class="tag-lang">{{ lang }}</span>
                   {% endfor %}
                 {% endif %}
                 {% if job.tools %}
-                  {% for tool in job.tools %}
+                  {% assign sorted_tools = job.tools | sort %}
+                  {% for tool in sorted_tools %}
                   <span class="tag-tool">{{ tool }}</span>
                   {% endfor %}
                 {% endif %}
                 {% if job.infrastructure %}
-                  {% for infra in job.infrastructure %}
+                  {% assign sorted_infra = job.infrastructure | sort %}
+                  {% for infra in sorted_infra %}
                   <span class="tag-infra">{{ infra }}</span>
                   {% endfor %}
                 {% endif %}
                 {% if job.frameworks %}
-                  {% for framework in job.frameworks %}
+                  {% assign sorted_frameworks = job.frameworks | sort %}
+                  {% for framework in sorted_frameworks %}
                   <span class="tag-framework">{{ framework }}</span>
                   {% endfor %}
                 {% endif %}
               </div>
               {% endif %}
             </div>
+          </article>
+          {% endfor %}
+        </section>
+        {% endif %}
+
+        <!-- ===== TECHNICAL SKILLS (2026: after experience per senior-level best practice) ===== -->
+        {% if site.resume_section_skills %}
+        <section class="skills-section" id="skills" aria-labelledby="skills-heading">
+          <div class="section-header">
+            <h2 id="skills-heading">Technical Skills</h2>
+          </div>
+          <div class="skills-grid">
+            {% for skill_group in site.data.skills %}
+            <div class="skill-block">
+              <div class="skill-category">{{ skill_group.category }}</div>
+              <div class="skill-items">{{ skill_group.items | join: ", " }}</div>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+
+        <!-- ===== EDUCATION (2026: in main content flow, not just sidebar/print) ===== -->
+        {% if site.resume_section_education %}
+        <section class="education-section" id="education" aria-labelledby="education-heading">
+          <div class="section-header">
+            <h2 id="education-heading">Education</h2>
+          </div>
+          {% for education in site.data.education %}
+          <div class="edu-item">
+            <div class="edu-degree-main">{{ education.degree }}</div><div class="edu-school-main">{{ education.uni }}</div>
+            <div class="edu-year-main">{{ education.year }}</div>
           </div>
           {% endfor %}
         </section>
         {% endif %}
 
-        <!-- ===== PRINCIPLES ===== -->
+        <!-- ===== WORKING PRINCIPLES (2026: values section, concise one-liners) ===== -->
         {% if site.resume_section_principles and site.data.principles %}
-        <section class="principles-section" id="principles">
+        <section class="principles-section" id="principles" aria-labelledby="principles-heading">
           <div class="section-header">
-            <h2>Work Principles</h2>
+            <h2 id="principles-heading">Working Principles</h2>
           </div>
           {% if site.data.principles.description %}
           <p class="principles-intro">{{ site.data.principles.description }}</p>
           {% endif %}
-          {% for group in site.data.principles.principles %}
-          <div class="principle-group">
-            <div class="principle-title">{{ group.title }}</div>
-            <ul class="principle-rules">
-              {% for rule in group.rules %}
-              <li>
-                {{ rule.title }}
-                {% if rule.rules %}
-                <ul class="principle-sub-rules">
-                  {% for sub in rule.rules %}
-                  <li>{{ sub }}</li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
-              </li>
-              {% endfor %}
-            </ul>
-          </div>
-          {% endfor %}
-        </section>
-        {% endif %}
-
-        <!-- ===== PRINT-ONLY SKILLS (sidebar hidden in print) ===== -->
-        {% if site.resume_section_skills %}
-        <section class="print-skills print-only">
-          <div class="section-header">
-            <h2>Skills</h2>
-          </div>
-          <div class="print-skills-grid">
-          {% for skill_group in site.data.skills %}
-            <div class="print-skill-block">
-              <strong>{{ skill_group.category }}:</strong>
-              {{ skill_group.items | join: ", " }}
+          <div class="principles-grid">
+            {% for group in site.data.principles.principles %}
+            <div class="principle-card">
+              <div class="principle-title">{{ group.title }}</div>
+              <ul class="principle-rules">
+                {% for rule in group.rules %}
+                <li>{{ rule.title }}</li>
+                {% endfor %}
+              </ul>
             </div>
-          {% endfor %}
+            {% endfor %}
           </div>
         </section>
         {% endif %}
 
-        <!-- ===== PRINT-ONLY EDUCATION ===== -->
-        {% if site.resume_section_education %}
-        <section class="print-education print-only">
+        <!-- ===== INTERESTS (2026: last section, supplementary) ===== -->
+        {% if site.resume_section_interests %}
+        <section class="interests-section" id="interests" aria-labelledby="interests-heading">
           <div class="section-header">
-            <h2>Education</h2>
+            <h2 id="interests-heading">Interests</h2>
           </div>
-          {% for education in site.data.education %}
-          <div class="print-edu-item">
-            <strong>{{ education.degree }}</strong> — {{ education.uni }}, {{ education.year }}
+          <div class="interests-tags">
+            {% for interest in site.data.interests %}
+            <span class="interest-tag">{{ interest.description }}</span>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
         {% endif %}
 
         <footer class="page-footer">
           <div class="footer-line">
-            <span class="no-print">Based on <a href="https://github.com/fr123k/resume" class="icon-link" itemprop="sameAs" target="_blank">{% include icons/icon-github.html %}</a></span>
+            <span class="no-print">Based on <a href="https://github.com/fr123k/resume" class="icon-link" itemprop="sameAs" target="_blank" rel="noopener noreferrer">{% include icons/icon-github.html %}</a></span>
             <span class="print-only footer-print-link">Based on <a href="https://github.com/fr123k/resume" itemprop="sameAs">https://github.com/fr123k/resume</a></span>
           </div>
         </footer>
@@ -175,6 +289,70 @@
       </main>
 
     </div>
+
+    <!-- Dark mode toggle script (no external dependencies, respects prefers-color-scheme) -->
+    <script>
+    (function() {
+      // Get stored theme or detect OS preference
+      function getTheme() {
+        var stored = localStorage.getItem('theme');
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      // Apply theme
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        updateToggle(theme);
+      }
+
+      // Update toggle button icon and aria-label
+      function updateToggle(theme) {
+        var btn = document.querySelector('.theme-toggle');
+        if (!btn) return;
+        if (theme === 'dark') {
+          btn.setAttribute('aria-label', 'Switch to light mode');
+        } else {
+          btn.setAttribute('aria-label', 'Switch to dark mode');
+        }
+      }
+
+      // Initialize on page load
+      var theme = getTheme();
+      setTheme(theme);
+
+      // Toggle on click
+      document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.querySelector('.theme-toggle');
+        if (btn) {
+          updateThemeIcon(btn);
+          btn.addEventListener('click', function() {
+            var current = document.documentElement.getAttribute('data-theme');
+            var next = current === 'dark' ? 'light' : 'dark';
+            setTheme(next);
+            updateThemeIcon(btn);
+          });
+        }
+
+        function updateThemeIcon(btn) {
+          var current = document.documentElement.getAttribute('data-theme') || getTheme();
+          if (current === 'dark') {
+            btn.setAttribute('aria-label', 'Switch to light mode');
+          } else {
+            btn.setAttribute('aria-label', 'Switch to dark mode');
+          }
+        }
+      });
+
+      // Listen for OS preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    })();
+    </script>
 
   </body>
 </html>

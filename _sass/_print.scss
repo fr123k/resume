@@ -1,12 +1,630 @@
-// Print / PDF styles
-// ---------------------------------------/
-// Print styles are now defined in _hyde.scss (within @media print blocks)
-// This file is kept for backward compatibility.
+// =============================================================================
+// Print / PDF stylesheet — 2026 single-column with cover-letter page
+// =============================================================================
+// Dedicated @media print rules.
+// Only affects printed paper / PDF export — the on-screen (web) appearance
+// is completely untouched.
+//
+// Design:
+//   1. COVER LETTER PAGE (print-only, page 1): name, title, contact, and
+//      the professional summary as a letter-style intro. Forces a page
+//      break after so the CV starts fresh on page 2+.
+//   2. CV PAGES (page 2+): single-column layout — no sidebar. All sections
+//      flow top-to-bottom in document order (ATS-safe).
+//   3. Proper A4 page margins on ALL sides (18mm top/bottom, 20mm left/right)
+//      via @page — safe for desktop printers and ATS text extraction.
+//   4. Serif headings (Cormorant Garamond) + sans body (Inter).
+//   5. Single muted gold accent (#c9a96e).
+//   6. Content shortened in print: summaries hidden for older roles, bullets
+//      limited per role via :nth-child. Tags as plain comma-separated text.
+//   7. No paragraph splitting: break-inside: avoid on items, paragraphs, and
+//      principle cards. Orphans/widows controlled.
+// =============================================================================
+
+// Print accent color — warm gold
+$print-accent:       #c9a96e;
+$print-accent-light: #d4b88c;
+$print-rule:         #e0d9cc;
+$print-text:         #2c2c2c;
+$print-heading:      #1a1a1a;
+$print-muted:        #6b6b6b;
+$print-faint:        #999;
 
 .print-only { display: none !important; }
 
 @media print {
-  .no-print { display: none !important; }
-  .print-only { display: block !important; }
-  span.print-only { display: inline !important; }
-}
+
+  /* =========================================================================
+     1. VISIBILITY
+     ======================================================================== */
+  .no-print,
+  .theme-toggle,
+  .skip-link,
+  .profile-avatar,
+  .sidebar {
+    display: none !important;
+  }
+
+  .print-only        { display: block  !important; }
+  span.print-only    { display: inline !important; }
+
+
+  /* =========================================================================
+     2. PAGE SETUP — proper margins on ALL sides
+     ======================================================================== */
+  @page {
+    size: A4;
+    // 18mm top/bottom, 20mm left/right — safe for desktop printers
+    // (most can't print within ~6mm of the edge) and above the 12.5mm
+    // (0.5″) ATS text-clipping floor.
+    margin: 18mm 20mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+
+  /* =========================================================================
+     3. FORCE LIGHT THEME
+     ======================================================================== */
+  :root,
+  [data-theme="dark"] {
+    --bg:                 #ffffff;
+    --card-bg:            #ffffff;
+    --card-accent-bg:     #ffffff;
+
+    --text:               #{$print-text};
+    --heading:            #{$print-heading};
+    --muted:              #{$print-muted};
+
+    --accent:             #{$print-accent};
+    --accent-light:       #{$print-accent-light};
+    --accent-hover:       #{$print-accent};
+
+    --border:             #{$print-rule};
+
+    --tag-lang-bg:        transparent;
+    --tag-lang-color:     #{$print-muted};
+    --tag-tool-bg:        transparent;
+    --tag-tool-color:     #{$print-muted};
+    --tag-infra-bg:       transparent;
+    --tag-infra-color:    #{$print-muted};
+    --tag-framework-bg:  transparent;
+    --tag-framework-color: #{$print-muted};
+
+    --shadow-sm:          none;
+    --shadow-md:          none;
+    --shadow-lg:          none;
+
+    --selection-bg:       #{$print-accent};
+    --selection-text:     #ffffff;
+  }
+
+
+  /* =========================================================================
+     4. BASE TYPOGRAPHY
+     ======================================================================== */
+  html {
+    font-size: 10pt;
+  }
+
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 10pt !important;
+    line-height: 1.25 !important;
+    color: #{$print-text} !important;
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  a {
+    color: #{$print-text} !important;
+    text-decoration: none !important;
+  }
+
+  p {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+  }
+
+
+  /* =========================================================================
+     5. LAYOUT SHELL — single column, no sidebar
+     ======================================================================== */
+  .page-wrapper {
+    display: block !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  .main-content {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    background: #fff !important;
+  }
+
+
+  /* =========================================================================
+     6. COVER LETTER PAGE (print-only, page 1)
+     ------------------------------------------------------------------------
+     The cover letter uses the professional summary as its body text and
+     forces a page break so the CV starts on page 2.
+     ======================================================================== */
+  .cover-letter {
+    padding: 0 !important;
+    margin: 0 !important;
+    break-after: page;
+    page-break-after: always;
+    // Fill the full printable page height and vertically center the content.
+    // Using a fixed calc() instead of 100vh — vh in paged media is
+    // inconsistent across browsers (some resolve against the screen
+    // viewport or full paper height instead of the page box).
+    // A4 = 297mm tall, @page margin top+bottom = 18mm each = 36mm.
+    height: calc(297mm - 36mm) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .cover-letter-header {
+    text-align: center;
+    border-bottom: 2px solid #{$print-accent} !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .cover-letter-name {
+    font-family: "Cormorant Garamond", "Georgia", serif !important;
+    font-size: 28pt !important;
+    font-weight: 700 !important;
+    color: #{$print-heading} !important;
+    margin: 0 0 4px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .cover-letter-title {
+    font-family: "Cormorant Garamond", "Georgia", serif !important;
+    font-size: 14pt !important;
+    font-style: italic !important;
+    color: #{$print-accent} !important;
+    margin: 0 0 8px !important;
+  }
+
+  .cover-letter-contact {
+    font-size: 9pt;
+    color: #{$print-muted};
+    display: flex !important;
+    justify-content: center;
+    gap: 0 1em;
+    flex-wrap: wrap;
+
+    span {
+      display: inline;
+    }
+    span + span::before {
+      content: "· ";
+      color: #{$print-accent};
+    }
+  }
+
+  .cover-letter-body {
+    max-width: 100% !important;
+
+    p {
+      font-size: 10pt !important;
+      color: #{$print-text} !important;
+      line-height: 1.5 !important;
+      margin: 0 0 12px !important;
+      text-align: left;
+    }
+
+    .cover-letter-quote {
+      font-family: "Cormorant Garamond", "Georgia", serif !important;
+      font-size: 12pt !important;
+      font-style: italic !important;
+      color: #{$print-muted} !important;
+      text-align: center !important;
+      margin-top: 20px !important;
+      padding: 12px 0 !important;
+      border-top: 1px solid #{$print-rule} !important;
+      border-bottom: 1px solid #{$print-rule} !important;
+    }
+  }
+
+  /* ---- Bottom bar: principles, education, interests ----
+     A 3-column bar at the bottom of the cover-letter page, using the
+     same gold-accent serif style as the former sidebar. */
+  .cover-letter-bottombar {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 28px !important;
+    padding-top: 16px !important;
+    border-top: 2px solid #{$print-accent} !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .clb-block {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .clb-title {
+    font-family: "Cormorant Garamond", "Georgia", serif !important;
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    color: #{$print-heading} !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding-bottom: 3px !important;
+    border-bottom: 1px solid #{$print-rule} !important;
+    margin-bottom: 6px !important;
+  }
+
+  .clb-list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    li {
+      font-size: 8.5pt !important;
+      line-height: 1.35 !important;
+      color: #{$print-text} !important;
+      padding-left: 10px !important;
+      position: relative;
+      margin-bottom: 2px;
+      list-style-type: none !important;
+      break-inside: avoid;
+      page-break-inside: avoid;
+
+      // Em-dash bullet in gold — same as sidebar style
+      &::before {
+        content: "—" !important;
+        color: #{$print-accent} !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: auto !important;
+        width: auto !important;
+        height: auto !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        opacity: 1 !important;
+        font-weight: 700 !important;
+      }
+    }
+  }
+
+
+  /* =========================================================================
+     7. PROFILE HEADER (CV page 2+)
+     ======================================================================== */
+  .profile-header {
+    text-align: left !important;
+    border-bottom: 3px solid #{$print-accent} !important;
+    padding: 0 0 10px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .profile-name {
+    font-family: "Cormorant Garamond", "Georgia", serif !important;
+    font-size: 24pt !important;
+    font-weight: 700 !important;
+    margin: 0 0 2px !important;
+    color: #{$print-heading} !important;
+    letter-spacing: 1px !important;
+  }
+
+  .profile-title {
+    font-family: "Cormorant Garamond", "Georgia", serif !important;
+    font-size: 12pt !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    color: #{$print-accent} !important;
+    margin: 0 0 6px !important;
+  }
+
+  .profile-contact {
+    font-size: 9pt;
+    color: #{$print-muted};
+    margin-bottom: 4px;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 0 0.8em !important;
+
+    .contact-link {
+      color: #{$print-muted} !important;
+    }
+  }
+
+  .profile-intro {
+    display: none !important; // covered by the cover letter page
+  }
+
+
+  /* =========================================================================
+     8. SECTION HEADERS
+     ======================================================================== */
+  .section-header {
+    break-after: avoid;
+    page-break-after: avoid;
+    margin-bottom: 8px !important;
+
+    h2 {
+      font-family: "Cormorant Garamond", "Georgia", serif !important;
+      font-size: 13pt !important;
+      font-weight: 700 !important;
+      color: #{$print-heading} !important;
+      border-bottom: 1px solid #{$print-rule} !important;
+      display: block !important;
+      letter-spacing: 1px !important;
+      text-transform: uppercase !important;
+      padding-bottom: 3px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+
+  /* =========================================================================
+     9. PROFESSIONAL SUMMARY
+     ------------------------------------------------------------------------
+     Hidden in print — the summary content appears on the cover-letter page.
+     ======================================================================== */
+  .summary-section {
+    display: none !important;
+  }
+
+
+  /* =========================================================================
+     10. EXPERIENCE
+     ------------------------------------------------------------------------
+     Content shortened in print:
+       - .exp-summary hidden (the detail is in the bullets)
+       - Bullets limited: recent 2 roles show 4, older roles show 2
+       - No item or paragraph splits across pages
+     ======================================================================== */
+  .experience-section {
+    .section-header {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  .exp-item {
+    display: block !important;
+    padding: 0 0 10px !important;
+    margin-bottom: 10px !important;
+    border: none !important;
+    border-bottom: 1px solid #eee !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .exp-item + .exp-item {
+    border-top: none !important;
+  }
+
+  .exp-item:last-child {
+    border-bottom: none !important;
+  }
+
+  .exp-date {
+    font-size: 9pt !important;
+    color: #{$print-faint} !important;
+    display: block !important;
+    padding-top: 0 !important;
+    text-align: right !important;
+    float: right !important;
+    margin-bottom: 0 !important;
+
+    &::after { content: "" !important; }
+  }
+
+  .exp-body {
+    display: block !important;
+    overflow: hidden !important; // contain the floated date
+  }
+
+  .exp-company {
+    font-size: 11pt !important;
+    font-weight: 700 !important;
+    color: #{$print-heading} !important;
+    display: block !important;
+
+    a { color: #{$print-heading} !important; text-decoration: none !important; }
+  }
+
+  .exp-position {
+    font-size: 10pt !important;
+    font-weight: 500 !important;
+    color: #{$print-accent} !important;
+    font-style: italic !important;
+    display: block !important;
+    margin: 1px 0 6px;
+  }
+
+  /* Hide summaries in print — bullets carry the detail */
+  .exp-summary {
+    display: none !important;
+  }
+
+  .exp-projects {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+
+    li {
+      font-size: 9.5pt !important;
+      line-height: 1.35 !important;
+      color: #{$print-text} !important;
+      position: relative;
+      padding-left: 14px !important;
+      margin-bottom: 3px;
+      list-style-type: none !important;
+      break-inside: avoid;
+      page-break-inside: avoid;
+      orphans: 2;
+      widows: 2;
+
+      // Em-dash bullet in gold
+      &::before {
+        content: "—" !important;
+        color: #{$print-accent} !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: auto !important;
+        width: auto !important;
+        height: auto !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        opacity: 1 !important;
+        font-weight: 700 !important;
+      }
+
+      a {
+        color: #{$print-text} !important;
+        font-weight: normal !important;
+        text-decoration: none !important;
+      }
+
+      a[href*="github"]::after {
+        content: " (github)";
+        font-size: 8pt;
+        color: #{$print-faint};
+      }
+      a[href*="http"]:not([href*="github"]):not([href*="linkedin"])::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #{$print-faint};
+      }
+    }
+
+    /* ---- Print bullet limits ----
+       First 2 roles (most recent): show up to 4 bullets.
+       Roles 3+: show only the first 2 bullets. */
+    li:nth-child(n+5) {
+      display: none !important;
+    }
+  }
+
+  /* Roles 3 onward (0-indexed n+3): limit to 2 bullets */
+  .exp-item:nth-child(n+4) .exp-projects li:nth-child(n+3) {
+    display: none !important;
+  }
+
+  /* ---- Tech tags: plain comma-separated text ---- */
+  .exp-tags {
+    display: block !important;
+    margin-top: 4px !important;
+
+    span {
+      display: inline !important;
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      font-size: 8.5pt !important;
+      color: #{$print-muted} !important;
+      font-weight: normal !important;
+
+      &::after { content: ", "; }
+      &:last-child::after { content: ""; }
+    }
+  }
+
+
+  /* =========================================================================
+     11. TECHNICAL SKILLS
+     ======================================================================== */
+  .skills-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+
+    .section-header {
+      margin-bottom: 6px !important;
+    }
+  }
+
+  .skills-grid {
+    display: block !important;
+  }
+
+  .skill-block {
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 4px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .skill-category {
+    font-size: 9pt !important;
+    color: #{$print-accent} !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    display: inline !important;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &::after { content: ": "; }
+  }
+
+  .skill-items {
+    font-size: 9pt !important;
+    color: #{$print-text} !important;
+    display: inline;
+    line-height: 1.4;
+  }
+
+
+  /* =========================================================================
+     12–14. EDUCATION, WORKING PRINCIPLES, INTERESTS
+     ------------------------------------------------------------------------
+     These sections are hidden from the CV pages in print — they now appear
+     in the cover-letter bottom bar (page 1) using the same gold-accent
+     sidebar style.
+     ======================================================================== */
+  .education-section,
+  .principles-section,
+  .interests-section {
+    display: none !important;
+  }
+
+
+  /* =========================================================================
+     15. FOOTER
+     ======================================================================== */
+  .page-footer {
+    border-top: 1px solid #{$print-rule} !important;
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+    margin-top: 16px !important;
+    text-align: center;
+
+    .footer-line {
+      font-size: 8pt;
+      color: #{$print-faint};
+
+      a {
+        color: #{$print-faint} !important;
+      }
+    }
+  }
+
+} // end @media print

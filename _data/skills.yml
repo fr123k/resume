@@ -1,4 +1,5 @@
-# Technical Skills — categorized for ATS keyword matching
+# Technical Skills — grouped by SRE/Platform function (2026 best practice)
+# Categories aligned with TechieCV Platform Engineer guide
 
 - category: "Cloud & Infrastructure"
   items:
@@ -8,7 +9,7 @@
     - OpenStack
     - Cloud-Native Architecture
 
-- category: "Container & Orchestration"
+- category: "Kubernetes & Containers"
   items:
     - Kubernetes (GKE, EKS, AKS)
     - Docker
@@ -16,23 +17,15 @@
     - Argo CD
     - Kustomize
 
-- category: "Infrastructure as Code"
+- category: "Infrastructure as Code & CI/CD"
   items:
     - HashiCorp Terraform
     - GCP Config Connector
-    - Pulumi
     - Ansible
     - Packer
-    - Vagrant
-
-- category: "CI/CD & Automation"
-  items:
     - GitHub Actions
     - CircleCI
     - Jenkins
-    - Travis CI
-    - Dependabot
-    - DuneBot
 
 - category: "Programming Languages"
   items:
@@ -52,39 +45,21 @@
     - Container Sandboxing
     - Multi-Agent Systems
 
-- category: "Observability & Monitoring"
+- category: "Observability & Reliability"
   items:
     - Prometheus
     - Grafana
     - Datadog
     - OpenTelemetry
-    - ELK Stack
+    - SLO / Error Budget Management
+    - Incident Response & On-Call
 
-- category: "Platform Engineering"
+- category: "Platform Engineering & Leadership"
   items:
     - Internal Developer Platform (IDP)
     - Self-Service Infrastructure
     - Developer Experience (DX)
     - Temporal
-
-- category: "Security & Compliance"
-  items:
     - ISO 27001
     - HashiCorp Vault
-    - Secrets Management
-    - Supply Chain Security
-
-- category: "Databases & Messaging"
-  items:
-    - PostgreSQL
-    - MongoDB
-    - MSSQL
-    - Redis / Memcached
-
-- category: "Leadership & Mentoring"
-  items:
-    - Team Leadership (4+ person teams)
-    - Technical Mentorship
-    - Cross-Functional Collaboration
-    - Roadmap Planning
-    - Agile / Scrum
+    - Team Leadership & Mentorship
