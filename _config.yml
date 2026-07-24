@@ -1,6 +1,6 @@
 # Site settings
-title: "Frank Ittermann — Resume"
-description: "The resume of Frank Ittermann — platform engineer with 15+ years of experience."
+title: "Software Engineer Resume"
+description: "Senior Platform Engineer resume of Frank Ittermann — 15+ years of cloud-native infrastructure, Kubernetes platforms, and distributed systems at scale."
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars.githubusercontent.com/u/126682769?v=4
@@ -56,8 +56,8 @@ resume_section_skills:          true
 resume_section_recognition:     false
 resume_section_links:           false
 resume_section_associations:    false
-resume_section_principles:      false
-resume_section_interests:       false
+resume_section_principles:      true
+resume_section_interests:       true
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
@@ -70,7 +70,7 @@ resume_social_links:
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://www.linkedin.com/in/frank-ittermann"
   # resume_instagram_url:         "insert your Instagram URL here"
-  resume_goodreads_url:          "https://www.goodreads.com/user/show/117403451-frank"
+  # resume_goodreads_url:          "https://www.goodreads.com/user/show/117403451-frank"
   resume_website_url:           "https://medium.com/@frank.ittermann_46267"
   #resume_medium_url:             ""
 resume_print_social_links:      true

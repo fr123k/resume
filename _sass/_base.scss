@@ -5,19 +5,21 @@
 }
 
 html {
-  background: $bg;
+  background: var(--bg);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  transition: background-color $transition-base;
 }
 
 body {
   font-family: $font-sans;
-  color: $text-color;
+  color: var(--text);
   font-size: $font-size-base;
   line-height: $line-height-base;
   margin: 0;
+  transition: color $transition-base;
 }
 
 // clearfix
@@ -26,17 +28,23 @@ body {
 .group:after { clear:both; }
 
 ::selection {
-  background: $accent;
-  color: #fff;
+  background: var(--selection-bg);
+  color: var(--selection-text);
   text-shadow: none;
 }
 
 a {
-  color: $accent;
+  color: var(--accent);
   text-decoration: none;
-  @include transition(color .2s ease);
+  transition: color $transition-fast;
 
   &:hover {
-    color: $accent-hover;
+    color: var(--accent-hover);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }

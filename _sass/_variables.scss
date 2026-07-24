@@ -1,11 +1,10 @@
 // Variables
 // ---------------------------------------/
 
-// Colors — Deep Navy + Warm Stone palette
-// Based on scientific research:
-//   - "Exciting red and competent blue" (Labrecque & Milne 2012): blue → trust, competence
-//   - TheLadders eye-tracking study: dark sidebar + high contrast = best readability
-//   - 60-30-10 rule: 60% bg, 30% sidebar, 10% accent
+// ===== COLOR SYSTEM: 2026 Modern Dark/Light =====
+// Supports dark mode via CSS custom properties on :root / [data-theme]
+
+// Light theme (default)
 $sidebar-bg:        #1e293b;
 $sidebar-text:      #cbd5e1;
 $sidebar-heading:   #ffffff;
@@ -30,22 +29,69 @@ $tag-lang-bg:       rgba(37, 99, 235, 0.1);
 $tag-lang-color:    #2563eb;
 $tag-tool-bg:       rgba(13, 148, 136, 0.1);
 $tag-tool-color:    #0d9488;
-$tag-infra-bg:      rgba(245, 158, 11, 0.1);
-$tag-infra-color:   #d97706;
+// Infrastructure tag — slate/steel (neutral, calm, fits infrastructure=foundation)
+$tag-infra-bg:      rgba(71, 85, 105, 0.1);
+$tag-infra-color:   #475569;
 $tag-framework-bg:  rgba(168, 85, 247, 0.1);
 $tag-framework-color: #9333ea;
 
-// Typography — optimized for screen readability (2025/2026 best practices)
+// ===== DARK MODE COLORS =====
+$dark-sidebar-bg:        #0f172a;
+$dark-sidebar-text:      #94a3b8;
+$dark-sidebar-heading:   #f1f5f9;
+$dark-sidebar-divider:   rgba(255, 255, 255, 0.06);
+
+$dark-accent:            #60a5fa;
+$dark-accent-light:      rgba(96, 165, 250, 0.15);
+$dark-accent-hover:      #93bbfd;
+
+$dark-bg:                #0f172a;
+$dark-card-bg:           #1e293b;
+$dark-text-color:        #cbd5e1;
+$dark-heading-color:     #f1f5f9;
+$dark-muted:             #94a3b8;
+$dark-border:            #334155;
+
+$dark-tag-lang-bg:       rgba(96, 165, 250, 0.15);
+$dark-tag-lang-color:    #60a5fa;
+$dark-tag-tool-bg:       rgba(45, 212, 191, 0.15);
+$dark-tag-tool-color:    #2dd4bf;
+// Dark infrastructure tag — slate/steel (neutral, calm)
+$dark-tag-infra-bg:      rgba(148, 163, 184, 0.12);
+$dark-tag-infra-color:   #94a3b8;
+$dark-tag-framework-bg:  rgba(192, 132, 252, 0.15);
+$dark-tag-framework-color: #c084fc;
+
+// ===== TYPOGRAPHY =====
+// Inter is the #1 recommended resume font for 2026 (NeuraCV, Jobscan)
 $font-sans:         "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-heading:      "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-mono:         "JetBrains Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$font-heading:      "Inter", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-mono:         "JetBrains Mono", "Fira Code", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 $font-size-base:    16px;
 $line-height-base:  1.55;
 
-// Layout - Narrative
+// ===== LAYOUT =====
 $story-max-width:   900px;
 $section-nav-height: 50px;
 $hero-min-height:   100vh;
 $container-width:   100%;
 $grid-gutter:       10px;
+
+// ===== TRANSITIONS =====
+$transition-fast:   0.15s ease;
+$transition-base:   0.25s ease;
+$transition-slow:   0.4s ease;
+
+// ===== BORDER RADIUS =====
+$radius-sm:         4px;
+$radius-md:         8px;
+$radius-lg:         12px;
+$radius-xl:         16px;
+
+// ===== SHADOWS =====
+$shadow-sm:         0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow-md:         0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+$shadow-lg:         0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+$dark-shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.2);
+$dark-shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
