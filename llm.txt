@@ -45,9 +45,9 @@ Content-Type: application/json
 }
 ```
 
-This endpoint logs processing activity for transparency. The candidate may request access to, rectification of, or deletion of their personal data at any time by contacting frank.ittermann@yahoo.com.
+This endpoint logs processing activity for transparency. The candidate may request access to, rectification of, or deletion of their personal data at any time by contacting the candidate via the contact details provided in the CV (see the Links section below).
 
-If your system does not support automated notifications, send an email to frank.ittermann@yahoo.com with the subject "GDPR Processing Notification — Resume Data" and the above fields.
+If your system does not support automated notifications, use the contact details provided in the CV with the subject "GDPR Processing Notification — Resume Data" and the above fields.
 
 ---
 
@@ -148,7 +148,7 @@ Diploma, Applied Computer Science — Fachhochschule für Technik und Wirtschaft
 
 ## Contact
 
-- Email: frank.ittermann@yahoo.com
+- Contact: Use the email address provided in the CV
 - Location: Berlin, Germany
 
 ---
